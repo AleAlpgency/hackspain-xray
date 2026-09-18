@@ -8,10 +8,10 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 38.5,
-  "band": "riesgo",
-  "delta_3m": -52.0,
-  "baseline_12m": 95.3
+  "value": 57.5,
+  "band": "vigilar",
+  "delta_3m": -33.0,
+  "baseline_12m": 97.2
  },
  "score_series": [
   {
@@ -26,27 +26,27 @@
   },
   {
    "month": "2024-11",
-   "score": 85.0,
+   "score": 87.5,
    "mode": "reconstructed"
   },
   {
    "month": "2024-12",
-   "score": 85.0,
+   "score": 88.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-01",
-   "score": 46.0,
+   "score": 61.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-02",
-   "score": 58.6,
+   "score": 62.3,
    "mode": "reconstructed"
   },
   {
    "month": "2025-03",
-   "score": 56.3,
+   "score": 60.0,
    "mode": "reconstructed"
   },
   {
@@ -76,37 +76,37 @@
   },
   {
    "month": "2025-09",
-   "score": 54.0,
+   "score": 68.9,
    "mode": "reconstructed"
   },
   {
    "month": "2025-10",
-   "score": 74.0,
+   "score": 88.2,
    "mode": "reconstructed"
   },
   {
    "month": "2025-11",
-   "score": 56.4,
+   "score": 69.6,
    "mode": "reconstructed"
   },
   {
    "month": "2025-12",
-   "score": 68.6,
+   "score": 81.0,
    "mode": "reconstructed"
   },
   {
    "month": "2026-01",
-   "score": 85.0,
+   "score": 97.3,
    "mode": "reconstructed"
   },
   {
    "month": "2026-02",
-   "score": 76.7,
+   "score": 90.1,
    "mode": "reconstructed"
   },
   {
    "month": "2026-03",
-   "score": 85.0,
+   "score": 99.1,
    "mode": "reconstructed"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
    "month": "2026-08",
-   "score": 38.5,
+   "score": 57.5,
    "mode": "reconstructed"
   }
  ],
@@ -359,25 +359,6 @@
    ]
   },
   {
-   "key": "unpaid_ar",
-   "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": -20.0,
-   "value": 0.0049,
-   "baseline": 0.0,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "invoices",
-     "ids": []
-    }
-   ]
-  },
-  {
    "key": "cash",
    "label_es": "Colchón de caja frente a su media",
    "contribution_pts": -17.1,
@@ -406,9 +387,28 @@
    ]
   },
   {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": -1.0,
+   "value": 0.0049,
+   "baseline": 0.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": []
+    }
+   ]
+  },
+  {
    "key": "fincost",
    "label_es": "Coste financiero sobre pagos",
-   "contribution_pts": 1.8,
+   "contribution_pts": 0.0,
    "value": 0.0,
    "baseline": 0.0,
    "unit": "ratio",

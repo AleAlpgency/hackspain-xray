@@ -8,10 +8,10 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 49.3,
-  "band": "riesgo",
-  "delta_3m": -19.1,
-  "baseline_12m": 86.6
+  "value": 81.0,
+  "band": "sana",
+  "delta_3m": -14.7,
+  "baseline_12m": 99.3
  },
  "score_series": [
   {
@@ -31,7 +31,7 @@
   },
   {
    "month": "2024-12",
-   "score": 75.0,
+   "score": 99.8,
    "mode": "reconstructed"
   },
   {
@@ -46,92 +46,92 @@
   },
   {
    "month": "2025-03",
-   "score": 74.4,
+   "score": 91.7,
    "mode": "reconstructed"
   },
   {
    "month": "2025-04",
-   "score": 69.4,
+   "score": 81.9,
    "mode": "reconstructed"
   },
   {
    "month": "2025-05",
-   "score": 69.6,
+   "score": 77.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-06",
-   "score": 69.5,
+   "score": 82.7,
    "mode": "reconstructed"
   },
   {
    "month": "2025-07",
-   "score": 69.4,
+   "score": 92.6,
    "mode": "reconstructed"
   },
   {
    "month": "2025-08",
-   "score": 73.7,
+   "score": 84.8,
    "mode": "reconstructed"
   },
   {
    "month": "2025-09",
-   "score": 66.8,
+   "score": 96.5,
    "mode": "reconstructed"
   },
   {
    "month": "2025-10",
-   "score": 90.5,
+   "score": 99.9,
    "mode": "reconstructed"
   },
   {
    "month": "2025-11",
-   "score": 71.2,
+   "score": 97.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-12",
-   "score": 69.1,
+   "score": 74.9,
    "mode": "reconstructed"
   },
   {
    "month": "2026-01",
-   "score": 45.6,
+   "score": 51.5,
    "mode": "reconstructed"
   },
   {
    "month": "2026-02",
-   "score": 59.7,
+   "score": 68.6,
    "mode": "reconstructed"
   },
   {
    "month": "2026-03",
-   "score": 66.2,
+   "score": 94.9,
    "mode": "reconstructed"
   },
   {
    "month": "2026-04",
-   "score": 66.5,
+   "score": 97.0,
    "mode": "reconstructed"
   },
   {
    "month": "2026-05",
-   "score": 68.4,
+   "score": 95.7,
    "mode": "reconstructed"
   },
   {
    "month": "2026-06",
-   "score": 69.8,
+   "score": 92.2,
    "mode": "reconstructed"
   },
   {
    "month": "2026-07",
-   "score": 69.7,
+   "score": 82.3,
    "mode": "reconstructed"
   },
   {
    "month": "2026-08",
-   "score": 49.3,
+   "score": 81.0,
    "mode": "reconstructed"
   }
  ],
@@ -331,28 +331,9 @@
  ],
  "drivers": [
   {
-   "key": "unpaid_ar",
-   "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": -20.0,
-   "value": 0.0029,
-   "baseline": 0.0,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "invoices",
-     "ids": []
-    }
-   ]
-  },
-  {
    "key": "pays_late",
    "label_es": "Días de retraso pagando a proveedores",
-   "contribution_pts": -12.5,
+   "contribution_pts": -18.2,
    "value": -0.8,
    "baseline": -8.1,
    "unit": "days",
@@ -370,29 +351,6 @@
       "9d3522492a661de194aa1985949ede2b",
       "530aa1dbd0f3434f1670655f6dfcec7b",
       "57140ff1f1d6a43a8c8055c3878d191f"
-     ]
-    }
-   ]
-  },
-  {
-   "key": "fincost",
-   "label_es": "Coste financiero sobre pagos",
-   "contribution_pts": -5.4,
-   "value": 0.0002,
-   "baseline": 0.0001,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "transactions",
-     "ids": [
-      "3d6cd30a97f7710be29222d03c7467fe",
-      "960769bf979c1ce103cdfe80a2281576",
-      "55bc343f3ac922e4ad46ed75415a7df3"
      ]
     }
    ]
@@ -421,6 +379,48 @@
       "2e3d02e2fcd2c06674ffe2267e7408f0",
       "b448f33740ac569636e85c2b1c07af7e",
       "fb4772aba0aee15a6e32cb65ae916d05"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": -0.6,
+   "value": 0.0029,
+   "baseline": 0.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": []
+    }
+   ]
+  },
+  {
+   "key": "fincost",
+   "label_es": "Coste financiero sobre pagos",
+   "contribution_pts": -0.1,
+   "value": 0.0002,
+   "baseline": 0.0001,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "transactions",
+     "ids": [
+      "3d6cd30a97f7710be29222d03c7467fe",
+      "960769bf979c1ce103cdfe80a2281576",
+      "55bc343f3ac922e4ad46ed75415a7df3"
      ]
     }
    ]

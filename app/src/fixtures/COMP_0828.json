@@ -8,10 +8,10 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 76.1,
+  "value": 83.3,
   "band": "sana",
-  "delta_3m": -14.3,
-  "baseline_12m": 94.1
+  "delta_3m": -13.3,
+  "baseline_12m": 96.0
  },
  "score_series": [
   {
@@ -36,12 +36,12 @@
   },
   {
    "month": "2025-01",
-   "score": 74.0,
+   "score": 77.8,
    "mode": "reconstructed"
   },
   {
    "month": "2025-02",
-   "score": 72.4,
+   "score": 77.1,
    "mode": "reconstructed"
   },
   {
@@ -51,22 +51,22 @@
   },
   {
    "month": "2025-04",
-   "score": 65.4,
+   "score": 74.8,
    "mode": "reconstructed"
   },
   {
    "month": "2025-05",
-   "score": 73.0,
+   "score": 87.7,
    "mode": "reconstructed"
   },
   {
    "month": "2025-06",
-   "score": 78.1,
+   "score": 92.1,
    "mode": "reconstructed"
   },
   {
    "month": "2025-07",
-   "score": 89.3,
+   "score": 95.5,
    "mode": "reconstructed"
   },
   {
@@ -76,7 +76,7 @@
   },
   {
    "month": "2025-09",
-   "score": 79.9,
+   "score": 80.0,
    "mode": "reconstructed"
   },
   {
@@ -86,12 +86,12 @@
   },
   {
    "month": "2025-11",
-   "score": 70.9,
+   "score": 76.7,
    "mode": "reconstructed"
   },
   {
    "month": "2025-12",
-   "score": 91.2,
+   "score": 92.1,
    "mode": "reconstructed"
   },
   {
@@ -111,27 +111,27 @@
   },
   {
    "month": "2026-04",
-   "score": 98.8,
+   "score": 99.6,
    "mode": "reconstructed"
   },
   {
    "month": "2026-05",
-   "score": 90.4,
+   "score": 96.6,
    "mode": "reconstructed"
   },
   {
    "month": "2026-06",
-   "score": 50.4,
+   "score": 66.0,
    "mode": "reconstructed"
   },
   {
    "month": "2026-07",
-   "score": 66.7,
+   "score": 79.7,
    "mode": "reconstructed"
   },
   {
    "month": "2026-08",
-   "score": 76.1,
+   "score": 83.3,
    "mode": "reconstructed"
   }
  ],
@@ -361,7 +361,7 @@
   {
    "key": "pays_late",
    "label_es": "Días de retraso pagando a proveedores",
-   "contribution_pts": -8.2,
+   "contribution_pts": -2.9,
    "value": 3.4,
    "baseline": 1.8,
    "unit": "days",

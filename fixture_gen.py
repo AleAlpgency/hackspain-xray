@@ -63,6 +63,7 @@ LABEL = {
     "fincost": "Coste financiero sobre pagos",
 }
 UNIT = {"cash": "days", "pays_late": "days", "unpaid_ar": "ratio", "fincost": "ratio"}
+FLOOR = {"cash": 5.0, "pays_late": 5.0, "unpaid_ar": 0.05, "fincost": 0.01}   # minimum span for the penalty ramp
 
 
 def trail(rows, i, k, n=3): return [rows[j][k] for j in range(max(0, i - n + 1), i + 1)]
@@ -94,7 +95,7 @@ def comp_score(k, v, b):
         return W[k] * max(0.0, min(1.0, v / b)) if b > 0 else W[k]
     # for the rest, less is better; lose points as v exceeds baseline
     if v <= b: return W[k]
-    span = max(b, 1e-9)
+    span = max(b, FLOOR[k])                # a zero baseline must not turn any blip into a full penalty
     return W[k] * max(0.0, 1.0 - (v - b) / (2 * span))
 
 

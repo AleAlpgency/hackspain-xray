@@ -1,32 +1,29 @@
-# React + TypeScript + Vite
+# Caja Real
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Módulo de planificación financiera sobre el score X-Ray. HackSpain 2026, reto de Embat.
 
-Currently, two official plugins are available:
+**Demo:** _(URL pública pendiente de despliegue)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Ejecutar en local
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm ci
+npm run dev        # http://localhost:5173
+npm run build && npm run preview   # build estático en http://localhost:4173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Abre `#/g/GROUP_0016`. Sin login: la autorización es una lista blanca simulada.
+
+## Datos
+
+La app solo lee de `src/data.ts`. Por defecto carga `src/fixtures/*.json` (generados por
+`../fixture_gen.py` desde el dump de Embat con un scorecard determinista, versión
+`fixture-v1-scorecard`). Cuando el modelo entregue, se añaden ficheros `*.model.json` con la
+misma forma y se construye con `VITE_DATA_SRC=model`; cada empresa que falte cae al fixture.
+
+Contrato Model → App: `src/types.ts`. Comprobación de forma: `node scripts/check-fixtures.mjs`.
+
+## Pantallas
+
+`#/g/:gid` grupo · `#/g/:gid/c/:id` empresa · `.../caja` camino de caja · `.../plan/:goalId`
+objetivo y planes · `#/g/:gid/alertas` alertas y anticipación medida.
