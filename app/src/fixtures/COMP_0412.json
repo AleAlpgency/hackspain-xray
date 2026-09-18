@@ -1,0 +1,740 @@
+{
+ "company_id": "COMP_0412",
+ "group_id": "GROUP_0016",
+ "name": "COMP_0412",
+ "currency": "EUR",
+ "assessment_date": "2026-08-31",
+ "model_version": "fixture-v1-scorecard",
+ "history_mode": "reconstructed",
+ "last_data_month": "2026-08",
+ "score": {
+  "value": 72.4,
+  "band": "vigilar",
+  "delta_3m": 36.1,
+  "baseline_12m": 73.5
+ },
+ "score_series": [
+  {
+   "month": "2024-09",
+   "score": 100.0,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2024-10",
+   "score": 81.5,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2024-11",
+   "score": 94.9,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2024-12",
+   "score": 80.6,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-01",
+   "score": 97.3,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-02",
+   "score": 88.9,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-03",
+   "score": 56.5,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-04",
+   "score": 50.1,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-05",
+   "score": 58.3,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-06",
+   "score": 66.5,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-07",
+   "score": 60.5,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-08",
+   "score": 51.4,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-09",
+   "score": 65.0,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-10",
+   "score": 37.1,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-11",
+   "score": 32.4,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2025-12",
+   "score": 69.5,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-01",
+   "score": 85.0,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-02",
+   "score": 75.0,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-03",
+   "score": 35.9,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-04",
+   "score": 39.3,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-05",
+   "score": 36.3,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-06",
+   "score": 55.6,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-07",
+   "score": 60.0,
+   "mode": "reconstructed"
+  },
+  {
+   "month": "2026-08",
+   "score": 72.4,
+   "mode": "reconstructed"
+  }
+ ],
+ "caja_real_series": [
+  {
+   "month": "2024-09",
+   "bank_cash": 34928,
+   "committed": 11838,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 23089
+  },
+  {
+   "month": "2024-10",
+   "bank_cash": 18458,
+   "committed": 70124,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -51666
+  },
+  {
+   "month": "2024-11",
+   "bank_cash": 24696,
+   "committed": 23264,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 1432
+  },
+  {
+   "month": "2024-12",
+   "bank_cash": 27499,
+   "committed": 56949,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -29450
+  },
+  {
+   "month": "2025-01",
+   "bank_cash": 36563,
+   "committed": 55651,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -19087
+  },
+  {
+   "month": "2025-02",
+   "bank_cash": 54393,
+   "committed": 67866,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -13473
+  },
+  {
+   "month": "2025-03",
+   "bank_cash": 26732,
+   "committed": 21840,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 4892
+  },
+  {
+   "month": "2025-04",
+   "bank_cash": 39138,
+   "committed": 40186,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -1048
+  },
+  {
+   "month": "2025-05",
+   "bank_cash": 59817,
+   "committed": 54000,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 5817
+  },
+  {
+   "month": "2025-06",
+   "bank_cash": 36048,
+   "committed": 12904,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 23145
+  },
+  {
+   "month": "2025-07",
+   "bank_cash": 30524,
+   "committed": 25876,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 4648
+  },
+  {
+   "month": "2025-08",
+   "bank_cash": 28890,
+   "committed": 14863,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 14027
+  },
+  {
+   "month": "2025-09",
+   "bank_cash": 32533,
+   "committed": 29749,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 2784
+  },
+  {
+   "month": "2025-10",
+   "bank_cash": 11185,
+   "committed": 8546455,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -8535270
+  },
+  {
+   "month": "2025-11",
+   "bank_cash": 7726,
+   "committed": 35970,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -28245
+  },
+  {
+   "month": "2025-12",
+   "bank_cash": 36615,
+   "committed": 43144,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -6529
+  },
+  {
+   "month": "2026-01",
+   "bank_cash": 26083,
+   "committed": 44553,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -18470
+  },
+  {
+   "month": "2026-02",
+   "bank_cash": 1336072,
+   "committed": 391699,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": 944373
+  },
+  {
+   "month": "2026-03",
+   "bank_cash": 26419,
+   "committed": 593611,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -567192
+  },
+  {
+   "month": "2026-04",
+   "bank_cash": 11030,
+   "committed": 591595,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -580565
+  },
+  {
+   "month": "2026-05",
+   "bank_cash": 16042,
+   "committed": 595765,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -579723
+  },
+  {
+   "month": "2026-06",
+   "bank_cash": 23911,
+   "committed": 603683,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -579771
+  },
+  {
+   "month": "2026-07",
+   "bank_cash": 12529,
+   "committed": 603377,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -590848
+  },
+  {
+   "month": "2026-08",
+   "bank_cash": 20997,
+   "committed": 233131,
+   "pledged": 0,
+   "trapped": 0,
+   "caja_real": -212134
+  }
+ ],
+ "drivers": [
+  {
+   "key": "fincost",
+   "label_es": "Coste financiero sobre pagos",
+   "contribution_pts": -13.5,
+   "value": 0.0,
+   "baseline": 0.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "transactions",
+     "ids": [
+      "34ca65932f7249998fe1314e0b61d90e",
+      "b6e70366614514761b756625ad6a1910",
+      "1c3d01701efd755c42c97b1f715b234f",
+      "593e20f7dc89ead61737d4aa93e9d88b",
+      "104da686e4dc260c83a08a0f77282ced",
+      "1ebb59e748866c1575be38a2414e809e",
+      "5519f4d420ce3e5efc1777aa705000a4",
+      "c67c48bd15e89213315970c13f650292"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "cash",
+   "label_es": "Colchón de caja frente a su media",
+   "contribution_pts": -11.4,
+   "value": 21.3,
+   "baseline": 31.1,
+   "unit": "days",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "transactions",
+     "ids": [
+      "bff3675f6fe43687f43a6b68a5a2a0f5",
+      "ca619f4e9f5a0a5bdefc6845ac00a13e",
+      "ab99d1271dbe6e5b8d91ef21ff12604f",
+      "13628bfebd93e14c75a9288b5a16009e",
+      "2ead2e28e598e7c53523e5166de19e7c",
+      "42fc96b320b8bd083d0920442b25b381",
+      "40e91bc10d7aabb0dca7aaba2eef797d",
+      "49e959d4d1192f55198937a4ad250c4b"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": 5.0,
+   "value": 0.0,
+   "baseline": 0.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": [
+      "ad7af79dc11d2656149efee3466d7b83",
+      "db7816e214d1df85b7302b05b016222f"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "pays_late",
+   "label_es": "Días de retraso pagando a proveedores",
+   "contribution_pts": 0.1,
+   "value": 3.4,
+   "baseline": 6.0,
+   "unit": "days",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": [
+      "46435981fcb709ba1a4fca217fe8e71e",
+      "5276aaaa62e34bfb68996d2e393e5b02",
+      "efa67241d64fe7662d93ed8d76c4232a",
+      "7cc52fb88b6bcef9320f57c3c5a22a64",
+      "d065a9b97bd8315b185ecc7e22a57838",
+      "0e65644965d60a5b04aade3f556fe93d",
+      "23d15eb2b95adf8daa306fcc8b84a64f",
+      "8826e0afb935edc5519963216147e3b4"
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "bank": {
+   "ok": true,
+   "last_date": "2026-08",
+   "n_accounts": 2
+  },
+  "erp": {
+   "ok": true,
+   "last_date": "2026-08",
+   "n_invoices": 511
+  },
+  "debt": {
+   "ok": false,
+   "n_products": 0,
+   "next_instalment_date": null
+  }
+ },
+ "event": {
+  "onset_month": "2025-10",
+  "conditions": [
+   "cash",
+   "unpaid_ar"
+  ]
+ },
+ "cash_path": {
+  "horizon_days": 90,
+  "buffer": 247281,
+  "points": [
+   {
+    "date": "2026-08-31",
+    "cash": 20997,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-09-07",
+    "cash": 27554,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-09-14",
+    "cash": 34111,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-09-21",
+    "cash": 40668,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-09-28",
+    "cash": -184595,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-10-05",
+    "cash": -180192,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-10-12",
+    "cash": -173693,
+    "kind": "contractual"
+   },
+   {
+    "date": "2026-10-19",
+    "cash": -167135,
+    "kind": "behavioural"
+   },
+   {
+    "date": "2026-10-26",
+    "cash": -387437,
+    "kind": "behavioural"
+   },
+   {
+    "date": "2026-11-02",
+    "cash": -380978,
+    "kind": "behavioural"
+   },
+   {
+    "date": "2026-11-09",
+    "cash": -374421,
+    "kind": "behavioural"
+   },
+   {
+    "date": "2026-11-16",
+    "cash": -367864,
+    "kind": "behavioural"
+   },
+   {
+    "date": "2026-11-23",
+    "cash": -588166,
+    "kind": "behavioural"
+   }
+  ],
+  "checkpoints": [
+   {
+    "day": 30,
+    "cash": -184595,
+    "committed_due": 4961
+   },
+   {
+    "day": 60,
+    "cash": -387437,
+    "committed_due": 7173
+   },
+   {
+    "day": 90,
+    "cash": -588166,
+    "committed_due": 7271
+   }
+  ],
+  "min_cash": {
+   "date": "2026-11-23",
+   "cash": -588166
+  },
+  "first_shortfall": {
+   "date": "2026-09-28",
+   "amount": 184595
+  },
+  "funding_gap": {
+   "amount": 835447,
+   "date": "2026-11-23"
+  },
+  "assumptions": [
+   {
+    "key": "dso",
+    "label_es": "Plazo medio de cobro",
+    "value": 45,
+    "unit": "días",
+    "period": "12m",
+    "source": "historical"
+   },
+   {
+    "key": "collections",
+    "label_es": "Cobros mensuales",
+    "value": 28102,
+    "unit": "€",
+    "period": "6m",
+    "source": "historical"
+   },
+   {
+    "key": "recurring",
+    "label_es": "Nóminas e impuestos mensuales",
+    "value": 226859,
+    "unit": "€",
+    "period": "6m",
+    "source": "historical"
+   },
+   {
+    "key": "buffer",
+    "label_es": "Colchón objetivo",
+    "value": 247281,
+    "unit": "€",
+    "period": "30 días de pagos",
+    "source": "user"
+   }
+  ]
+ },
+ "goals": [
+  {
+   "goal_id": "colchon_90d",
+   "metric": "min_cash",
+   "label_es": "Caja mínima ≥ 247.281 € durante 90 días",
+   "target": 247281,
+   "unit": "€",
+   "deadline": "2026-11-29",
+   "constraints": [
+    {
+     "metric": "new_debt",
+     "op": "<=",
+     "value": 0,
+     "label_es": "Sin nueva deuda"
+    }
+   ],
+   "plans": [
+    {
+     "plan_id": "cobrar_antes",
+     "title_es": "Cobrar 10 días antes",
+     "changes": [
+      {
+       "driver": "dso",
+       "label_es": "Plazo de cobro",
+       "from": 45,
+       "to": 35,
+       "unit": "días"
+      }
+     ],
+     "attainment": {
+      "value": -601280,
+      "target": 247281,
+      "pct": 0,
+      "met": false
+     },
+     "cash_impact": {
+      "min_cash": -601280,
+      "min_cash_date": "2026-11-23",
+      "delta_vs_base": -13114
+     },
+     "trade_offs": [],
+     "unmet_constraints": [
+      {
+       "constraint_label_es": "Caja ≥ 247.281 € todo el periodo",
+       "breach_date": "2026-09-28",
+       "value": -197709
+      }
+     ],
+     "qualifies": false
+    },
+    {
+     "plan_id": "pagar_despues",
+     "title_es": "Pagar a proveedores 15 días después",
+     "changes": [
+      {
+       "driver": "dpo",
+       "label_es": "Plazo de pago",
+       "from": 0,
+       "to": 15,
+       "unit": "días"
+      }
+     ],
+     "attainment": {
+      "value": -588166,
+      "target": 247281,
+      "pct": 0,
+      "met": false
+     },
+     "cash_impact": {
+      "min_cash": -588166,
+      "min_cash_date": "2026-11-23",
+      "delta_vs_base": 0
+     },
+     "trade_offs": [
+      {
+       "metric": "supplier_relation",
+       "label_es": "Riesgo con proveedores",
+       "delta": 1,
+       "unit": "nivel"
+      }
+     ],
+     "unmet_constraints": [
+      {
+       "constraint_label_es": "Caja ≥ 247.281 € todo el periodo",
+       "breach_date": "2026-09-28",
+       "value": -179634
+      }
+     ],
+     "qualifies": false
+    },
+    {
+     "plan_id": "linea_credito",
+     "title_es": "Línea de crédito de 200 k€",
+     "changes": [
+      {
+       "driver": "credit",
+       "label_es": "Nueva financiación",
+       "from": 0,
+       "to": 200000,
+       "unit": "€"
+      }
+     ],
+     "attainment": {
+      "value": -388166,
+      "target": 247281,
+      "pct": 0,
+      "met": false
+     },
+     "cash_impact": {
+      "min_cash": -388166,
+      "min_cash_date": "2026-11-23",
+      "delta_vs_base": 200000
+     },
+     "trade_offs": [
+      {
+       "metric": "fincost",
+       "label_es": "Coste financiero anual",
+       "delta": 9000,
+       "unit": "€"
+      }
+     ],
+     "unmet_constraints": [
+      {
+       "constraint_label_es": "Sin nueva deuda",
+       "breach_date": "2026-08-31",
+       "value": 200000
+      },
+      {
+       "constraint_label_es": "Caja ≥ 247.281 € todo el periodo",
+       "breach_date": "2026-10-26",
+       "value": -187437
+      }
+     ],
+     "qualifies": false
+    }
+   ],
+   "remaining_gap": {
+    "amount": 635447,
+    "date": "2026-11-23"
+   }
+  }
+ ]
+}

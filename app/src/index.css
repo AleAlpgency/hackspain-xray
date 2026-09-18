@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #131a24;
+  --color-ink-2: #4a5566;
+  --color-ink-3: #7b8596;
+  --color-surface: #ffffff;
+  --color-bg: #f5f6f8;
+  --color-line: #dfe3ea;
+  --color-accent: #0f6b6e;
+  --color-accent-soft: #e3f0ef;
+  --color-good: #1f7a4d;
+  --color-good-soft: #e4f2ea;
+  --color-warn: #a4620a;
+  --color-warn-soft: #fbf0dd;
+  --color-bad: #9c2f2f;
+  --color-bad-soft: #f9e5e5;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html { color-scheme: light; }
+body { @apply bg-bg text-ink font-sans text-[14px] leading-normal antialiased; margin: 0; }
+.num { font-variant-numeric: tabular-nums; }
+.recharts-cartesian-axis-tick text { fill: var(--color-ink-3); font-size: 11px; }
+.recharts-tooltip-wrapper { font-size: 12px; }
