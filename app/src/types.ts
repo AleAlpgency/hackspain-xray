@@ -18,6 +18,7 @@ export interface CompanyRow {
   bank_cash: number; caja_real: number
   first_shortfall_date: string | null
   last_data_month: string
+  publicable: boolean
   coverage: { bank: boolean; erp: boolean; debt: boolean }
 }
 
@@ -75,6 +76,33 @@ export interface Goal {
   remaining_gap: { amount: number; date: string } | null
 }
 
+
+// The four Data panels, company-month key.
+export interface FlujosRow {
+  month: string
+  cobros_operativos: number; pagos_operativos: number; financiacion: number; inversion: number; transferencias: number; excluido: number
+  flujo_neto: number
+  caja_acumulada: number   // cumulative net flow from 0: shape known, level unknown
+}
+export interface CobroRow {
+  month: string; dso_real: number | null; cartera_abierta: number; pct_vencido: number | null
+  aging: { corriente: number; d1_30: number; d31_90: number; d90p: number }
+  concentracion_hhi: number | null; top3_pct: number | null; n_clientes: number
+}
+export interface DeudaRow { month: string; servicio_principal: number; servicio_intereses: number; cobertura: number | null }
+export interface DeudaPerfil {
+  n_productos: number; tipos: Record<string, number>; concedido: number; dispuesto: number
+  utilizacion: number | null; proxima_cuota: string | null
+}
+export interface EvidenciaRow {
+  month: string; cobertura: { banco: boolean; erp: boolean; deuda: boolean }
+  pct_sin_categorizar: number | null; banderas: string[]
+}
+export interface EvidenciaResumen {
+  meses_historia: number; publicable: boolean; motivos: string[]
+  cobertura: { banco: boolean; erp: boolean; deuda: boolean }; pct_sin_categorizar: number
+}
+
 export interface Company {
   company_id: string; group_id: string; name: string; currency: string
   assessment_date: string; model_version: string; history_mode: HistoryMode
@@ -91,4 +119,8 @@ export interface Company {
   event: { onset_month: string; conditions: string[] } | null
   cash_path: CashPath | null
   goals: Goal[]
+  flujos: FlujosRow[]
+  cobro: CobroRow[]
+  deuda: { serie: DeudaRow[]; perfil: DeudaPerfil }
+  evidencia: { serie: EvidenciaRow[]; resumen: EvidenciaResumen }
 }

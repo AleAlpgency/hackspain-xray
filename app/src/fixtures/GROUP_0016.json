@@ -51,6 +51,7 @@
    "caja_real": -3279216,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -76,6 +77,7 @@
    "caja_real": -212134,
    "first_shortfall_date": "2026-09-28",
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -101,6 +103,7 @@
    "caja_real": -167971,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -126,6 +129,7 @@
    "caja_real": -113840,
    "first_shortfall_date": "2026-09-28",
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -151,6 +155,7 @@
    "caja_real": -54263,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -176,6 +181,7 @@
    "caja_real": -6757,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -201,6 +207,7 @@
    "caja_real": -2764,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -226,6 +233,7 @@
    "caja_real": -2520,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -251,6 +259,7 @@
    "caja_real": 8414,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -276,6 +285,7 @@
    "caja_real": 12147,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": false,
    "coverage": {
     "bank": true,
     "erp": false,
@@ -301,6 +311,7 @@
    "caja_real": 37090,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": false,
@@ -326,6 +337,7 @@
    "caja_real": 86102,
    "first_shortfall_date": null,
    "last_data_month": "2026-03",
+   "publicable": false,
    "coverage": {
     "bank": true,
     "erp": false,
@@ -351,6 +363,7 @@
    "caja_real": 239873,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": true,
@@ -376,6 +389,7 @@
    "caja_real": 2283639,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": true,
    "coverage": {
     "bank": true,
     "erp": false,
@@ -401,6 +415,7 @@
    "caja_real": 5149524,
    "first_shortfall_date": null,
    "last_data_month": "2026-08",
+   "publicable": false,
    "coverage": {
     "bank": true,
     "erp": true,

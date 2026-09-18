@@ -242,6 +242,117 @@ def goals_for(c, rows):
     }], basep
 
 
+
+# ---------- the four panels proposed by Data (company-month key) ----------
+FLUJO = {
+    "cobros_operativos": {"collection", "bulk_collection", "pos_settlement", "cash_settlement", "collection_refund", "tax_refund"},
+    "pagos_operativos": {"payment", "bulk_payment", "utility", "salary", "tax", "social_security", "fee", "cash_withdrawal", "pos_withdrawal", "payment_refund", "cash_settlements"},
+    "financiacion": {"debt_repayment", "interest_charge"},
+    "inversion": {"investment_deployment", "investment_return"},
+    "transferencias": {"transfer"},
+}
+CAT2BUCKET = {cat: b for b, cats in FLUJO.items() for cat in cats}
+
+
+def panel_flujos(c, rows):
+    """Euro decomposition per month. caja_acumulada is cumulative net flow from 0: shape known, level unknown."""
+    by = collections.defaultdict(lambda: collections.defaultdict(float))
+    for r in tx[c]:
+        by[r["date"][:7]][CAT2BUCKET.get(r["category"], "excluido")] += float(r["amount"] or 0)
+    out, acc = [], 0.0
+    for r in rows:
+        m = r["month"]; b = by[m]
+        neto = b["cobros_operativos"] + b["pagos_operativos"] + b["financiacion"] + b["inversion"]
+        acc += neto
+        out.append({"month": m, **{k: round(b[k]) for k in list(FLUJO) + ["excluido"]},
+                    "flujo_neto": round(neto), "caja_acumulada": round(acc)})
+    return out
+
+
+def panel_cobro(c, rows):
+    """Receivables portfolio reconstructed at each month end, from invoices (counterparty_id present on 98.7%)."""
+    ar = [r for r in inv[c] if float(r["amount"] or 0) > 0]
+    for r in ar:
+        r["_iss"], r["_due"], r["_pay"] = d(r["issuance_date"]), d(r["due_date"]), d(r["payment_date"]) if r["status"] == "paid" else None
+    out = []
+    for i, r0 in enumerate(rows):
+        m = r0["month"]; end = d(m + "-28")
+        open_ = [r for r in ar if r["_iss"] and r["_iss"] <= end and (r["_pay"] is None or r["_pay"] > end)]
+        amt = lambda r: abs(float(r["pending_amount"] or 0)) if r["_pay"] is None else float(r["amount"])
+        total = sum(amt(r) for r in open_)
+        aging = {"corriente": 0.0, "d1_30": 0.0, "d31_90": 0.0, "d90p": 0.0}
+        for r in open_:
+            if not r["_due"] or r["_due"] >= end: aging["corriente"] += amt(r)
+            else:
+                dd = (end - r["_due"]).days
+                aging["d1_30" if dd <= 30 else "d31_90" if dd <= 90 else "d90p"] += amt(r)
+        vencido = total - aging["corriente"]
+        paid_now = [r for r in ar if r["_pay"] and r["_pay"].strftime("%Y-%m") == m and r["_iss"]]
+        dso = st.mean([(r["_pay"] - r["_iss"]).days for r in paid_now]) if paid_now else None
+        w0 = d(rows[max(0, i - 11)]["month"] + "-01")
+        bycp = collections.Counter()
+        for r in ar:
+            if r["_pay"] and w0 <= r["_pay"] <= end and r["counterparty_id"]: bycp[r["counterparty_id"]] += float(r["amount"])
+        tot = sum(bycp.values())
+        shares = sorted((v / tot for v in bycp.values()), reverse=True) if tot > 0 else []
+        out.append({"month": m, "dso_real": round(dso, 1) if dso is not None else None,
+                    "cartera_abierta": round(total), "pct_vencido": round(vencido / total, 4) if total > 0 else None,
+                    "aging": {k: round(v) for k, v in aging.items()},
+                    "concentracion_hhi": round(sum(x * x for x in shares), 4) if shares else None,
+                    "top3_pct": round(100 * sum(shares[:3])) if shares else None, "n_clientes": len(bycp)})
+    return out
+
+
+def panel_deuda(c, rows, flujos):
+    """Observed debt service per month, coverage by operating flow, and the static profile."""
+    by = collections.defaultdict(lambda: {"p": 0.0, "i": 0.0})
+    for r in tx[c]:
+        a = float(r["amount"] or 0)
+        if r["category"] == "debt_repayment" and a < 0: by[r["date"][:7]]["p"] += -a
+        if r["category"] == "interest_charge" and a < 0: by[r["date"][:7]]["i"] += -a
+    serie = []
+    for r, f in zip(rows, flujos):
+        m = r["month"]; svc = by[m]["p"] + by[m]["i"]
+        op = f["cobros_operativos"] + f["pagos_operativos"]
+        serie.append({"month": m, "servicio_principal": round(by[m]["p"]), "servicio_intereses": round(by[m]["i"]),
+                      "cobertura": round(op / svc, 2) if svc > 0 else None})
+    prods = debt_products[c]
+    tipos = collections.Counter(r["type"] for r in prods)
+    conc = sum(abs(float(r["granted"] or 0)) for r in prods)
+    disp = sum(abs(float(r["outstanding"] or 0)) for r in prods)
+    perfil = {"n_productos": len(prods), "tipos": dict(tipos), "concedido": round(conc), "dispuesto": round(disp),
+              "utilizacion": round(disp / conc, 2) if conc > 0 else None,
+              "proxima_cuota": min((r["next_payment_date"][:10] for r in sched[c]), default=None)}
+    return {"serie": serie, "perfil": perfil}
+
+
+def panel_evidencia(c, rows):
+    """Coverage per source, history length, uncategorised share, flags. Decides if the score is publishable."""
+    ncat = collections.Counter(); ntot = collections.Counter()
+    for r in tx[c]:
+        m = r["date"][:7]; ntot[m] += 1
+        if r["category"] in ("-", ""): ncat[m] += 1
+    serie = []
+    for r in rows:
+        m = r["month"]
+        pct = ncat[m] / ntot[m] if ntot[m] else None
+        flags = []
+        if r["n"] == 0: flags.append("sin_movimientos")
+        if r["inv_n"] == 0: flags.append("sin_erp")
+        if pct is not None and pct > 0.5: flags.append("sin_categorizar_alto")
+        serie.append({"month": m, "cobertura": {"banco": r["n"] > 0, "erp": r["inv_n"] > 0, "deuda": bool(debt_products[c])},
+                      "pct_sin_categorizar": round(pct, 3) if pct is not None else None, "banderas": flags})
+    meses = sum(1 for r in rows if r["n"] > 0)
+    uncat_all = sum(ncat.values()) / sum(ntot.values()) if sum(ntot.values()) else 1.0
+    motivos = []
+    if meses < 12: motivos.append(f"Solo {meses} meses de historia (mínimo 12)")
+    if not any(r["n"] > 0 for r in rows[-3:]): motivos.append("Sin movimientos bancarios en los últimos 3 meses")
+    if uncat_all > 0.6: motivos.append(f"{round(100 * uncat_all)} % de movimientos sin categorizar")
+    resumen = {"meses_historia": meses, "publicable": not motivos, "motivos": motivos,
+               "cobertura": {"banco": any(r["n"] > 0 for r in rows), "erp": any(r["inv_n"] > 0 for r in rows), "deuda": bool(debt_products[c])},
+               "pct_sin_categorizar": round(uncat_all, 3)}
+    return {"serie": serie, "resumen": resumen}
+
 # ---------- evidence ids for drivers ----------
 def evidence(c, key, months):
     ids = []
@@ -300,6 +411,7 @@ for c in IDS:
         caja.append({"month": r["month"], "bank_cash": round(r["cash_close"]), "committed": round(com[r["month"]] + recurring(rows, i)),
                      "pledged": round(pl), "trapped": 0, "caja_real": round(cr)})
     goals, cp = goals_for(c, rows)
+    flujos = panel_flujos(c, rows); evidencia = panel_evidencia(c, rows)
     caja_now = caja[-1]["caja_real"]
     group_cash["bank"] += rows[-1]["cash_close"]; group_cash["committed"] += caja[-1]["committed"]
     group_cash["pledged"] += pl; group_cash["caja"] += caja_now
@@ -319,6 +431,7 @@ for c in IDS:
         },
         "event": {"onset_month": onsets[c], "conditions": fired.get((c, onsets[c]), [])} if c in onsets else None,
         "cash_path": cp, "goals": goals,
+        "flujos": flujos, "cobro": panel_cobro(c, rows), "deuda": panel_deuda(c, rows, flujos), "evidencia": evidencia,
     }
     json.dump(company, open(f"{OUT}/{c}.json", "w"), ensure_ascii=False, indent=1)
 
@@ -327,7 +440,7 @@ for c in IDS:
         "delta_3m": round(cur - prev3, 1), "trend_6m": [s["score"] for s in series[-6:]],
         "bank_cash": round(rows[-1]["cash_close"]), "caja_real": caja_now,
         "first_shortfall_date": cp["first_shortfall"]["date"] if cp["first_shortfall"] else None,
-        "last_data_month": rows[-1]["month"],
+        "last_data_month": rows[-1]["month"], "publicable": evidencia["resumen"]["publicable"],
         "coverage": {"bank": company["coverage"]["bank"]["ok"], "erp": company["coverage"]["erp"]["ok"], "debt": company["coverage"]["debt"]["ok"]},
     })
 

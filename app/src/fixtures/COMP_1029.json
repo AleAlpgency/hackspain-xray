@@ -698,5 +698,1044 @@
     "date": "2026-08-31"
    }
   }
- ]
+ ],
+ "flujos": [
+  {
+   "month": "2024-09",
+   "cobros_operativos": 9812,
+   "pagos_operativos": -5410,
+   "financiacion": -1033,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -144,
+   "flujo_neto": 3369,
+   "caja_acumulada": 3369
+  },
+  {
+   "month": "2024-10",
+   "cobros_operativos": 139657,
+   "pagos_operativos": -141587,
+   "financiacion": -1033,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -584,
+   "flujo_neto": -2964,
+   "caja_acumulada": 405
+  },
+  {
+   "month": "2024-11",
+   "cobros_operativos": 45,
+   "pagos_operativos": -173130,
+   "financiacion": -1033,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -195,
+   "flujo_neto": -174119,
+   "caja_acumulada": -173714
+  },
+  {
+   "month": "2024-12",
+   "cobros_operativos": 917,
+   "pagos_operativos": -3761,
+   "financiacion": -1033,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -177,
+   "flujo_neto": -3877,
+   "caja_acumulada": -177591
+  },
+  {
+   "month": "2025-01",
+   "cobros_operativos": 600,
+   "pagos_operativos": -1449,
+   "financiacion": -1033,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -328,
+   "flujo_neto": -1882,
+   "caja_acumulada": -179473
+  },
+  {
+   "month": "2025-02",
+   "cobros_operativos": 65351,
+   "pagos_operativos": -53154,
+   "financiacion": -1017,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 144196,
+   "flujo_neto": 11179,
+   "caja_acumulada": -168295
+  },
+  {
+   "month": "2025-03",
+   "cobros_operativos": 86,
+   "pagos_operativos": -1060,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -370,
+   "flujo_neto": -974,
+   "caja_acumulada": -169269
+  },
+  {
+   "month": "2025-04",
+   "cobros_operativos": 0,
+   "pagos_operativos": -375,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -655,
+   "flujo_neto": -375,
+   "caja_acumulada": -169644
+  },
+  {
+   "month": "2025-05",
+   "cobros_operativos": 1291,
+   "pagos_operativos": -102559,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -918,
+   "flujo_neto": -101269,
+   "caja_acumulada": -270912
+  },
+  {
+   "month": "2025-06",
+   "cobros_operativos": 0,
+   "pagos_operativos": -2170,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": -2170,
+   "caja_acumulada": -273082
+  },
+  {
+   "month": "2025-07",
+   "cobros_operativos": 28,
+   "pagos_operativos": -1766,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -148,
+   "flujo_neto": -1738,
+   "caja_acumulada": -274820
+  },
+  {
+   "month": "2025-08",
+   "cobros_operativos": 0,
+   "pagos_operativos": -1360,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": -1360,
+   "caja_acumulada": -276180
+  },
+  {
+   "month": "2025-09",
+   "cobros_operativos": 1875,
+   "pagos_operativos": -5561,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -544,
+   "flujo_neto": -3685,
+   "caja_acumulada": -279865
+  },
+  {
+   "month": "2025-10",
+   "cobros_operativos": 326,
+   "pagos_operativos": -2640,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -13,
+   "flujo_neto": -2314,
+   "caja_acumulada": -282180
+  },
+  {
+   "month": "2025-11",
+   "cobros_operativos": 370000,
+   "pagos_operativos": -6539,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 3657,
+   "flujo_neto": 363461,
+   "caja_acumulada": 81282
+  },
+  {
+   "month": "2025-12",
+   "cobros_operativos": 0,
+   "pagos_operativos": -335596,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -285001,
+   "flujo_neto": -335596,
+   "caja_acumulada": -254314
+  },
+  {
+   "month": "2026-01",
+   "cobros_operativos": 44000,
+   "pagos_operativos": -804,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -804,
+   "flujo_neto": 43196,
+   "caja_acumulada": -211119
+  },
+  {
+   "month": "2026-02",
+   "cobros_operativos": 2000,
+   "pagos_operativos": -48616,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": -46616,
+   "caja_acumulada": -257735
+  },
+  {
+   "month": "2026-03",
+   "cobros_operativos": 0,
+   "pagos_operativos": -453,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": -453,
+   "caja_acumulada": -258188
+  },
+  {
+   "month": "2026-04",
+   "cobros_operativos": 227,
+   "pagos_operativos": -697,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 191,
+   "flujo_neto": -470,
+   "caja_acumulada": -258658
+  },
+  {
+   "month": "2026-05",
+   "cobros_operativos": 0,
+   "pagos_operativos": -1846,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -1846,
+   "flujo_neto": -1846,
+   "caja_acumulada": -260505
+  },
+  {
+   "month": "2026-06",
+   "cobros_operativos": 9527,
+   "pagos_operativos": -19000,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": -9473,
+   "caja_acumulada": -269978
+  },
+  {
+   "month": "2026-07",
+   "cobros_operativos": 46000,
+   "pagos_operativos": -46167,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -798,
+   "flujo_neto": -167,
+   "caja_acumulada": -270145
+  },
+  {
+   "month": "2026-08",
+   "cobros_operativos": 8000,
+   "pagos_operativos": -3723,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -3630,
+   "flujo_neto": 4277,
+   "caja_acumulada": -265868
+  }
+ ],
+ "cobro": [
+  {
+   "month": "2024-09",
+   "dso_real": null,
+   "cartera_abierta": 600,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 600,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2024-10",
+   "dso_real": null,
+   "cartera_abierta": 1245,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 645,
+    "d31_90": 600,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2024-11",
+   "dso_real": 14,
+   "cartera_abierta": 1200,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 1200,
+    "d90p": 0
+   },
+   "concentracion_hhi": 1.0,
+   "top3_pct": 100,
+   "n_clientes": 1
+  },
+  {
+   "month": "2024-12",
+   "dso_real": 3.5,
+   "cartera_abierta": 1200,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 600,
+    "d90p": 600
+   },
+   "concentracion_hhi": 0.7839,
+   "top3_pct": 100,
+   "n_clientes": 2
+  },
+  {
+   "month": "2025-01",
+   "dso_real": 130,
+   "cartera_abierta": 600,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 600
+   },
+   "concentracion_hhi": 0.758,
+   "top3_pct": 99,
+   "n_clientes": 4
+  },
+  {
+   "month": "2025-02",
+   "dso_real": 68,
+   "cartera_abierta": 186200,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 186200,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.6547,
+   "top3_pct": 99,
+   "n_clientes": 4
+  },
+  {
+   "month": "2025-03",
+   "dso_real": null,
+   "cartera_abierta": 186200,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 186200,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.6547,
+   "top3_pct": 99,
+   "n_clientes": 4
+  },
+  {
+   "month": "2025-04",
+   "dso_real": 20.3,
+   "cartera_abierta": 2422,
+   "pct_vencido": 0.991,
+   "aging": {
+    "corriente": 22,
+    "d1_30": 1200,
+    "d31_90": 1200,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.9079,
+   "top3_pct": 99,
+   "n_clientes": 6
+  },
+  {
+   "month": "2025-05",
+   "dso_real": 49.5,
+   "cartera_abierta": 2400,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 600,
+    "d31_90": 1200,
+    "d90p": 600
+   },
+   "concentracion_hhi": 0.9022,
+   "top3_pct": 99,
+   "n_clientes": 6
+  },
+  {
+   "month": "2025-06",
+   "dso_real": null,
+   "cartera_abierta": 3000,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 600,
+    "d31_90": 1800,
+    "d90p": 600
+   },
+   "concentracion_hhi": 0.9022,
+   "top3_pct": 99,
+   "n_clientes": 6
+  },
+  {
+   "month": "2025-07",
+   "dso_real": null,
+   "cartera_abierta": 3600,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 600,
+    "d31_90": 1200,
+    "d90p": 1800
+   },
+   "concentracion_hhi": 0.9022,
+   "top3_pct": 99,
+   "n_clientes": 6
+  },
+  {
+   "month": "2025-08",
+   "dso_real": null,
+   "cartera_abierta": 4200,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 600,
+    "d31_90": 1200,
+    "d90p": 2400
+   },
+   "concentracion_hhi": 0.9022,
+   "top3_pct": 99,
+   "n_clientes": 6
+  },
+  {
+   "month": "2025-09",
+   "dso_real": 72.4,
+   "cartera_abierta": 4500,
+   "pct_vencido": 1.0,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 300,
+    "d31_90": 1200,
+    "d90p": 3000
+   },
+   "concentracion_hhi": 0.9022,
+   "top3_pct": 99,
+   "n_clientes": 6
+  },
+  {
+   "month": "2025-10",
+   "dso_real": 9,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.857,
+   "top3_pct": 99,
+   "n_clientes": 9
+  },
+  {
+   "month": "2025-11",
+   "dso_real": 0,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.5312,
+   "top3_pct": 98,
+   "n_clientes": 10
+  },
+  {
+   "month": "2025-12",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.5432,
+   "top3_pct": 100,
+   "n_clientes": 8
+  },
+  {
+   "month": "2026-01",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.5443,
+   "top3_pct": 100,
+   "n_clientes": 8
+  },
+  {
+   "month": "2026-02",
+   "dso_real": 0,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.5454,
+   "top3_pct": 100,
+   "n_clientes": 8
+  },
+  {
+   "month": "2026-03",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.5454,
+   "top3_pct": 100,
+   "n_clientes": 8
+  },
+  {
+   "month": "2026-04",
+   "dso_real": null,
+   "cartera_abierta": 316,
+   "pct_vencido": 0.0,
+   "aging": {
+    "corriente": 316,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.97,
+   "top3_pct": 100,
+   "n_clientes": 6
+  },
+  {
+   "month": "2026-05",
+   "dso_real": 30,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.9715,
+   "top3_pct": 100,
+   "n_clientes": 7
+  },
+  {
+   "month": "2026-06",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.9715,
+   "top3_pct": 100,
+   "n_clientes": 7
+  },
+  {
+   "month": "2026-07",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.9715,
+   "top3_pct": 100,
+   "n_clientes": 7
+  },
+  {
+   "month": "2026-08",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": 0.9715,
+   "top3_pct": 100,
+   "n_clientes": 7
+  }
+ ],
+ "deuda": {
+  "serie": [
+   {
+    "month": "2024-09",
+    "servicio_principal": 1033,
+    "servicio_intereses": 0,
+    "cobertura": 4.26
+   },
+   {
+    "month": "2024-10",
+    "servicio_principal": 1033,
+    "servicio_intereses": 0,
+    "cobertura": -1.87
+   },
+   {
+    "month": "2024-11",
+    "servicio_principal": 1033,
+    "servicio_intereses": 0,
+    "cobertura": -167.55
+   },
+   {
+    "month": "2024-12",
+    "servicio_principal": 1033,
+    "servicio_intereses": 0,
+    "cobertura": -2.75
+   },
+   {
+    "month": "2025-01",
+    "servicio_principal": 1033,
+    "servicio_intereses": 0,
+    "cobertura": -0.82
+   },
+   {
+    "month": "2025-02",
+    "servicio_principal": 1017,
+    "servicio_intereses": 0,
+    "cobertura": 11.99
+   },
+   {
+    "month": "2025-03",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-04",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-05",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-06",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-07",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-08",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-09",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-10",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-11",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-12",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-01",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-02",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-03",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-04",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-05",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-06",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-07",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-08",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   }
+  ],
+  "perfil": {
+   "n_productos": 0,
+   "tipos": {},
+   "concedido": 0,
+   "dispuesto": 0,
+   "utilizacion": null,
+   "proxima_cuota": null
+  }
+ },
+ "evidencia": {
+  "serie": [
+   {
+    "month": "2024-09",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.143,
+    "banderas": []
+   },
+   {
+    "month": "2024-10",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.263,
+    "banderas": []
+   },
+   {
+    "month": "2024-11",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.273,
+    "banderas": []
+   },
+   {
+    "month": "2024-12",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.214,
+    "banderas": []
+   },
+   {
+    "month": "2025-01",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.333,
+    "banderas": []
+   },
+   {
+    "month": "2025-02",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.174,
+    "banderas": []
+   },
+   {
+    "month": "2025-03",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.357,
+    "banderas": []
+   },
+   {
+    "month": "2025-04",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.2,
+    "banderas": []
+   },
+   {
+    "month": "2025-05",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.182,
+    "banderas": []
+   },
+   {
+    "month": "2025-06",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": []
+   },
+   {
+    "month": "2025-07",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.083,
+    "banderas": []
+   },
+   {
+    "month": "2025-08",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": []
+   },
+   {
+    "month": "2025-09",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.05,
+    "banderas": []
+   },
+   {
+    "month": "2025-10",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.062,
+    "banderas": []
+   },
+   {
+    "month": "2025-11",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.19,
+    "banderas": []
+   },
+   {
+    "month": "2025-12",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.111,
+    "banderas": []
+   },
+   {
+    "month": "2026-01",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.375,
+    "banderas": []
+   },
+   {
+    "month": "2026-02",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": []
+   },
+   {
+    "month": "2026-03",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": []
+   },
+   {
+    "month": "2026-04",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.286,
+    "banderas": []
+   },
+   {
+    "month": "2026-05",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.5,
+    "banderas": []
+   },
+   {
+    "month": "2026-06",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": []
+   },
+   {
+    "month": "2026-07",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.222,
+    "banderas": []
+   },
+   {
+    "month": "2026-08",
+    "cobertura": {
+     "banco": true,
+     "erp": true,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.2,
+    "banderas": []
+   }
+  ],
+  "resumen": {
+   "meses_historia": 24,
+   "publicable": true,
+   "motivos": [],
+   "cobertura": {
+    "banco": true,
+    "erp": true,
+    "deuda": false
+   },
+   "pct_sin_categorizar": 0.183
+  }
+ }
 }

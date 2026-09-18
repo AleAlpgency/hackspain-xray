@@ -30,7 +30,7 @@ export default function Group() {
             <tbody>{g.companies.map(r => (
               <tr key={r.company_id} onClick={() => nav(to(r.company_id))} className="border-t border-line hover:bg-accent-soft/40 cursor-pointer">
                 <td className="px-4 py-2 font-medium">{companyName(r.company_id)}{r.currency !== 'EUR' && <span className="ml-2 text-[10px] font-mono text-ink-3 border border-line rounded px-1">{r.currency}</span>}</td>
-                <td className="px-2 py-2"><ScoreChip value={r.score} band={r.band} hollow={!r.coverage.erp} /></td>
+                <td className="px-2 py-2" title={r.publicable ? "" : "Score no publicable: evidencia insuficiente"}><ScoreChip value={r.score} band={r.band} hollow={!r.publicable} /></td>
                 <td className="px-2 py-2"><Sparkline points={r.trend_6m} /></td>
                 <td className={`px-2 py-2 text-right num font-medium ${r.caja_real < 0 ? 'text-bad' : ''}`}>{money(r.caja_real)}</td>
                 <td className="px-2 py-2 text-right num text-ink-2">{money(r.bank_cash)}</td>

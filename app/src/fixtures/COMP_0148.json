@@ -490,5 +490,434 @@
    ],
    "remaining_gap": null
   }
- ]
+ ],
+ "flujos": [
+  {
+   "month": "2025-07",
+   "cobros_operativos": 213599,
+   "pagos_operativos": -22807,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -147350,
+   "flujo_neto": 190793,
+   "caja_acumulada": 190793
+  },
+  {
+   "month": "2025-08",
+   "cobros_operativos": 529611,
+   "pagos_operativos": 0,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -40000,
+   "flujo_neto": 529611,
+   "caja_acumulada": 720404
+  },
+  {
+   "month": "2025-09",
+   "cobros_operativos": 239950,
+   "pagos_operativos": 0,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -772510,
+   "flujo_neto": 239950,
+   "caja_acumulada": 960353
+  },
+  {
+   "month": "2025-10",
+   "cobros_operativos": 23302,
+   "pagos_operativos": 0,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -18150,
+   "flujo_neto": 23301,
+   "caja_acumulada": 983655
+  },
+  {
+   "month": "2025-11",
+   "cobros_operativos": 108857,
+   "pagos_operativos": -3653,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -109992,
+   "flujo_neto": 105204,
+   "caja_acumulada": 1088859
+  },
+  {
+   "month": "2025-12",
+   "cobros_operativos": 38666,
+   "pagos_operativos": -35949,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": 2716,
+   "caja_acumulada": 1091576
+  },
+  {
+   "month": "2026-01",
+   "cobros_operativos": 89032,
+   "pagos_operativos": -1327,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": 0,
+   "flujo_neto": 87704,
+   "caja_acumulada": 1179280
+  },
+  {
+   "month": "2026-02",
+   "cobros_operativos": 131091,
+   "pagos_operativos": -116419,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -90000,
+   "flujo_neto": 14672,
+   "caja_acumulada": 1193952
+  },
+  {
+   "month": "2026-03",
+   "cobros_operativos": 122162,
+   "pagos_operativos": -3001,
+   "financiacion": 0,
+   "inversion": 0,
+   "transferencias": 0,
+   "excluido": -48776,
+   "flujo_neto": 119161,
+   "caja_acumulada": 1313113
+  }
+ ],
+ "cobro": [
+  {
+   "month": "2025-07",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2025-08",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2025-09",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2025-10",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2025-11",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2025-12",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2026-01",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2026-02",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  },
+  {
+   "month": "2026-03",
+   "dso_real": null,
+   "cartera_abierta": 0,
+   "pct_vencido": null,
+   "aging": {
+    "corriente": 0,
+    "d1_30": 0,
+    "d31_90": 0,
+    "d90p": 0
+   },
+   "concentracion_hhi": null,
+   "top3_pct": null,
+   "n_clientes": 0
+  }
+ ],
+ "deuda": {
+  "serie": [
+   {
+    "month": "2025-07",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-08",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-09",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-10",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-11",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2025-12",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-01",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-02",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   },
+   {
+    "month": "2026-03",
+    "servicio_principal": 0,
+    "servicio_intereses": 0,
+    "cobertura": null
+   }
+  ],
+  "perfil": {
+   "n_productos": 0,
+   "tipos": {},
+   "concedido": 0,
+   "dispuesto": 0,
+   "utilizacion": null,
+   "proxima_cuota": null
+  }
+ },
+ "evidencia": {
+  "serie": [
+   {
+    "month": "2025-07",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.5,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2025-08",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.167,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2025-09",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.5,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2025-10",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.333,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2025-11",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.25,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2025-12",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2026-01",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.0,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2026-02",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.25,
+    "banderas": [
+     "sin_erp"
+    ]
+   },
+   {
+    "month": "2026-03",
+    "cobertura": {
+     "banco": true,
+     "erp": false,
+     "deuda": false
+    },
+    "pct_sin_categorizar": 0.286,
+    "banderas": [
+     "sin_erp"
+    ]
+   }
+  ],
+  "resumen": {
+   "meses_historia": 9,
+   "publicable": false,
+   "motivos": [
+    "Solo 9 meses de historia (mínimo 12)"
+   ],
+   "cobertura": {
+    "banco": true,
+    "erp": false,
+    "deuda": false
+   },
+   "pct_sin_categorizar": 0.286
+  }
+ }
 }
