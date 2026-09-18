@@ -69,15 +69,20 @@ FLOOR = {"cash": 5.0, "pays_late": 5.0, "unpaid_ar": 0.05, "fincost": 0.01}   # 
 def trail(rows, i, k, n=3): return [rows[j][k] for j in range(max(0, i - n + 1), i + 1)]
 
 
-def signals(rows):
+def signals(rows, ovd_clean=None):
+    """ovd_clean: per-month pct_vencido from panel_cobro (point-in-time, excludes the sticky overdue stock).
+    Without it we fall back to panel.csv's ovd_amt, which is what stress.py's events use."""
     out = []
     for i, r in enumerate(rows):
         outflow = st.mean(trail(rows, i, "outflow"))
         buf = r["cash_close"] / (outflow / 30) if outflow > 0 else None
         paid = sum(trail(rows, i, "paid_n"))
         dpd = sum(trail(rows, i, "dpd_sum")) / paid if paid else None
-        billed = st.mean(trail(rows, i, "inv_ar", 12))
-        ovd = st.mean(trail(rows, i, "ovd_amt")) / billed if billed > 0 else None
+        if ovd_clean is not None:
+            ovd = ovd_clean[i]
+        else:
+            billed = st.mean(trail(rows, i, "inv_ar", 12))
+            ovd = st.mean(trail(rows, i, "ovd_amt")) / billed if billed > 0 else None
         fin = sum(trail(rows, i, "fincost")) / sum(trail(rows, i, "outflow")) if sum(trail(rows, i, "outflow")) > 0 else None
         out.append({"cash": buf, "pays_late": dpd, "unpaid_ar": ovd, "fincost": fin})
     return out
@@ -99,8 +104,8 @@ def comp_score(k, v, b):
     return W[k] * max(0.0, 1.0 - (v - b) / (2 * span))
 
 
-def score_series(rows):
-    sig = signals(rows)
+def score_series(rows, ovd_clean=None):
+    sig = signals(rows, ovd_clean)
     B = {k: base([s[k] for s in sig]) for k in W}
     series, parts = [], []
     for i, r in enumerate(rows):
@@ -384,7 +389,8 @@ for c in IDS:
     meta = comps[c]
     if not rows:
         continue
-    series, parts, sig, B = score_series(rows)
+    cobro = panel_cobro(c, rows)
+    series, parts, sig, B = score_series(rows, [x["pct_vencido"] for x in cobro])
     for s in series: all_scores[(c, s["month"])] = s["score"]
     last_i = len(rows) - 1
     cur, prev3 = series[-1]["score"], series[max(0, last_i - 3)]["score"]
@@ -431,7 +437,7 @@ for c in IDS:
         },
         "event": {"onset_month": onsets[c], "conditions": fired.get((c, onsets[c]), [])} if c in onsets else None,
         "cash_path": cp, "goals": goals,
-        "flujos": flujos, "cobro": panel_cobro(c, rows), "deuda": panel_deuda(c, rows, flujos), "evidencia": evidencia,
+        "flujos": flujos, "cobro": cobro, "deuda": panel_deuda(c, rows, flujos), "evidencia": evidencia,
     }
     json.dump(company, open(f"{OUT}/{c}.json", "w"), ensure_ascii=False, indent=1)
 

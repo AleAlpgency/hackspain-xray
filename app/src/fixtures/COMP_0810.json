@@ -8,9 +8,9 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 78.3,
+  "value": 98.3,
   "band": "sana",
-  "delta_3m": 24.1,
+  "delta_3m": 44.1,
   "baseline_12m": 98.6
  },
  "score_series": [
@@ -126,12 +126,12 @@
   },
   {
    "month": "2026-07",
-   "score": 80.0,
+   "score": 100.0,
    "mode": "reconstructed"
   },
   {
    "month": "2026-08",
-   "score": 78.3,
+   "score": 98.3,
    "mode": "reconstructed"
   }
  ],
@@ -331,25 +331,6 @@
  ],
  "drivers": [
   {
-   "key": "unpaid_ar",
-   "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": -20.0,
-   "value": 0.2886,
-   "baseline": 0.0,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "invoices",
-     "ids": []
-    }
-   ]
-  },
-  {
    "key": "pays_late",
    "label_es": "Días de retraso pagando a proveedores",
    "contribution_pts": -0.7,
@@ -402,6 +383,25 @@
       "2d02acd55b6fda67f52c54916337df58",
       "4193d49658859cee069711fb264a61e7"
      ]
+    }
+   ]
+  },
+  {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": 0.0,
+   "value": null,
+   "baseline": 1.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": []
     }
    ]
   },

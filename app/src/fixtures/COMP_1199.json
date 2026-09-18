@@ -8,9 +8,9 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 57.5,
+  "value": 58.5,
   "band": "vigilar",
-  "delta_3m": -33.0,
+  "delta_3m": -32.0,
   "baseline_12m": 97.2
  },
  "score_series": [
@@ -131,7 +131,7 @@
   },
   {
    "month": "2026-08",
-   "score": 57.5,
+   "score": 58.5,
    "mode": "reconstructed"
   }
  ],
@@ -389,8 +389,8 @@
   {
    "key": "unpaid_ar",
    "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": -1.0,
-   "value": 0.0049,
+   "contribution_pts": 0.0,
+   "value": 0.0,
    "baseline": 0.0,
    "unit": "ratio",
    "months": [

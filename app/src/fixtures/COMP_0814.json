@@ -8,9 +8,9 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 81.0,
+  "value": 81.6,
   "band": "sana",
-  "delta_3m": -14.7,
+  "delta_3m": -14.1,
   "baseline_12m": 99.3
  },
  "score_series": [
@@ -131,7 +131,7 @@
   },
   {
    "month": "2026-08",
-   "score": 81.0,
+   "score": 81.6,
    "mode": "reconstructed"
   }
  ],
@@ -384,25 +384,6 @@
    ]
   },
   {
-   "key": "unpaid_ar",
-   "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": -0.6,
-   "value": 0.0029,
-   "baseline": 0.0,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "invoices",
-     "ids": []
-    }
-   ]
-  },
-  {
    "key": "fincost",
    "label_es": "Coste financiero sobre pagos",
    "contribution_pts": -0.1,
@@ -422,6 +403,25 @@
       "960769bf979c1ce103cdfe80a2281576",
       "55bc343f3ac922e4ad46ed75415a7df3"
      ]
+    }
+   ]
+  },
+  {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": 0.0,
+   "value": 0.0,
+   "baseline": 0.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": []
     }
    ]
   }

@@ -11,7 +11,7 @@
   "value": 60.4,
   "band": "vigilar",
   "delta_3m": -10.5,
-  "baseline_12m": 99.7
+  "baseline_12m": 99.9
  },
  "score_series": [
   {
@@ -26,17 +26,17 @@
   },
   {
    "month": "2024-11",
-   "score": 51.1,
+   "score": 71.1,
    "mode": "reconstructed"
   },
   {
    "month": "2024-12",
-   "score": 51.0,
+   "score": 71.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-01",
-   "score": 59.3,
+   "score": 79.3,
    "mode": "reconstructed"
   },
   {
@@ -56,17 +56,17 @@
   },
   {
    "month": "2025-05",
-   "score": 99.7,
+   "score": 100.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-06",
-   "score": 95.4,
+   "score": 95.9,
    "mode": "reconstructed"
   },
   {
    "month": "2025-07",
-   "score": 88.6,
+   "score": 89.3,
    "mode": "reconstructed"
   },
   {
@@ -359,25 +359,6 @@
    ]
   },
   {
-   "key": "unpaid_ar",
-   "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": 0.1,
-   "value": 0.0006,
-   "baseline": 0.0076,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "invoices",
-     "ids": []
-    }
-   ]
-  },
-  {
    "key": "pays_late",
    "label_es": "Días de retraso pagando a proveedores",
    "contribution_pts": 0.0,
@@ -396,6 +377,25 @@
       "04d80e91d3a0f215f131ebe44da4b31b",
       "000a990358c312bf61173d27f4f30129"
      ]
+    }
+   ]
+  },
+  {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": 0.0,
+   "value": null,
+   "baseline": 1.0,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": []
     }
    ]
   },

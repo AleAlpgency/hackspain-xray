@@ -8,10 +8,10 @@
  "history_mode": "reconstructed",
  "last_data_month": "2026-08",
  "score": {
-  "value": 42.1,
-  "band": "riesgo",
-  "delta_3m": -18.7,
-  "baseline_12m": 98.6
+  "value": 62.0,
+  "band": "vigilar",
+  "delta_3m": -9.4,
+  "baseline_12m": 98.8
  },
  "score_series": [
   {
@@ -36,37 +36,37 @@
   },
   {
    "month": "2025-01",
-   "score": 98.5,
+   "score": 98.3,
    "mode": "reconstructed"
   },
   {
    "month": "2025-02",
-   "score": 85.2,
+   "score": 87.7,
    "mode": "reconstructed"
   },
   {
    "month": "2025-03",
-   "score": 87.9,
+   "score": 90.9,
    "mode": "reconstructed"
   },
   {
    "month": "2025-04",
-   "score": 97.1,
+   "score": 90.6,
    "mode": "reconstructed"
   },
   {
    "month": "2025-05",
-   "score": 96.5,
+   "score": 95.6,
    "mode": "reconstructed"
   },
   {
    "month": "2025-06",
-   "score": 92.4,
+   "score": 89.0,
    "mode": "reconstructed"
   },
   {
    "month": "2025-07",
-   "score": 81.9,
+   "score": 67.1,
    "mode": "reconstructed"
   },
   {
@@ -76,62 +76,62 @@
   },
   {
    "month": "2025-09",
-   "score": 77.6,
+   "score": 63.2,
    "mode": "reconstructed"
   },
   {
    "month": "2025-10",
-   "score": 73.7,
+   "score": 77.4,
    "mode": "reconstructed"
   },
   {
    "month": "2025-11",
-   "score": 74.1,
+   "score": 77.1,
    "mode": "reconstructed"
   },
   {
    "month": "2025-12",
-   "score": 79.9,
+   "score": 83.2,
    "mode": "reconstructed"
   },
   {
    "month": "2026-01",
-   "score": 76.3,
+   "score": 82.6,
    "mode": "reconstructed"
   },
   {
    "month": "2026-02",
-   "score": 64.3,
+   "score": 75.9,
    "mode": "reconstructed"
   },
   {
    "month": "2026-03",
-   "score": 69.0,
+   "score": 65.8,
    "mode": "reconstructed"
   },
   {
    "month": "2026-04",
-   "score": 52.8,
+   "score": 62.7,
    "mode": "reconstructed"
   },
   {
    "month": "2026-05",
-   "score": 60.8,
+   "score": 71.4,
    "mode": "reconstructed"
   },
   {
    "month": "2026-06",
-   "score": 50.5,
+   "score": 68.3,
    "mode": "reconstructed"
   },
   {
    "month": "2026-07",
-   "score": 59.3,
+   "score": 79.3,
    "mode": "reconstructed"
   },
   {
    "month": "2026-08",
-   "score": 42.1,
+   "score": 62.0,
    "mode": "reconstructed"
   }
  ],
@@ -359,34 +359,6 @@
    ]
   },
   {
-   "key": "unpaid_ar",
-   "label_es": "Facturas de clientes sin cobrar",
-   "contribution_pts": -19.8,
-   "value": 0.1057,
-   "baseline": 0.0059,
-   "unit": "ratio",
-   "months": [
-    "2026-06",
-    "2026-07",
-    "2026-08"
-   ],
-   "evidence": [
-    {
-     "source": "invoices",
-     "ids": [
-      "31e4401459a3bf27feb600eca71c8cf7",
-      "fe1dd98126df9124b64f194ec53aec8e",
-      "7e1e83c00db190acac1914716c601475",
-      "16e53f8abb51f7ac0d8fa090fd76948e",
-      "32594e8ed49ecde4c16d5282e9aca449",
-      "13af2e667858879609a69f386935f391",
-      "cf6c4821cf3aacb925f3eb79bb9f7440",
-      "789500d4d5b8341190b261455795cd69"
-     ]
-    }
-   ]
-  },
-  {
    "key": "pays_late",
    "label_es": "Días de retraso pagando a proveedores",
    "contribution_pts": 0.4,
@@ -410,6 +382,34 @@
       "3f8c11a6f2290822db7565889163c349",
       "7e0a4f69fac099748e1a4a9bee25ef1a",
       "c748d8f452d0f8261db5bf2296a6ce0d"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "unpaid_ar",
+   "label_es": "Facturas de clientes sin cobrar",
+   "contribution_pts": 0.0,
+   "value": 0.064,
+   "baseline": 0.1925,
+   "unit": "ratio",
+   "months": [
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "evidence": [
+    {
+     "source": "invoices",
+     "ids": [
+      "31e4401459a3bf27feb600eca71c8cf7",
+      "fe1dd98126df9124b64f194ec53aec8e",
+      "7e1e83c00db190acac1914716c601475",
+      "16e53f8abb51f7ac0d8fa090fd76948e",
+      "32594e8ed49ecde4c16d5282e9aca449",
+      "13af2e667858879609a69f386935f391",
+      "cf6c4821cf3aacb925f3eb79bb9f7440",
+      "789500d4d5b8341190b261455795cd69"
      ]
     }
    ]
