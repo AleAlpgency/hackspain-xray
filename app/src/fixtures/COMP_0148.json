@@ -315,17 +315,17 @@
    {
     "day": 30,
     "cash": 165919,
-    "committed_due": 0
+    "committed_due": 288
    },
    {
     "day": 60,
     "cash": 245448,
-    "committed_due": 0
+    "committed_due": 575
    },
    {
     "day": 90,
     "cash": 324978,
-    "committed_due": 0
+    "committed_due": 863
    }
   ],
   "min_cash": {
@@ -399,15 +399,15 @@
       }
      ],
      "attainment": {
-      "value": 86390,
+      "value": 114896,
       "target": 71211,
       "pct": 100,
       "met": true
      },
      "cash_impact": {
-      "min_cash": 86390,
+      "min_cash": 114896,
       "min_cash_date": "2026-08-31",
-      "delta_vs_base": 0
+      "delta_vs_base": 28506
      },
      "trade_offs": [],
      "unmet_constraints": [],

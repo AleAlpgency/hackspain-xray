@@ -231,8 +231,8 @@
    "key": "fincost",
    "label_es": "Coste financiero sobre pagos",
    "contribution_pts": 0,
-   "value": 0.0,
-   "baseline": 0.0,
+   "value": 0.0002,
+   "baseline": 0.0003,
    "unit": "ratio",
    "months": [
     "2026-06",
@@ -430,15 +430,15 @@
       }
      ],
      "attainment": {
-      "value": 12147,
+      "value": 37379,
       "target": 74267,
-      "pct": 16,
+      "pct": 50,
       "met": false
      },
      "cash_impact": {
-      "min_cash": 12147,
+      "min_cash": 37379,
       "min_cash_date": "2026-08-31",
-      "delta_vs_base": 0
+      "delta_vs_base": 25232
      },
      "trade_offs": [],
      "unmet_constraints": [],

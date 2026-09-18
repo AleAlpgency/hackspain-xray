@@ -165,7 +165,7 @@ def cash_path(c, rows, mods=None):
                 if nd > SNAP: payables.append((nd, inst))
                 nd += datetime.timedelta(days=30)
 
-    pts, cash, kind_switch = [], cash0 + credit, 45  # behavioural after day 45
+    pts, cash, kind_switch = [], cash0 + credit - coll_m * dso_shift / 30, 45  # behavioural after day 45
     first_short, min_cash = None, (SNAP, cash)
     for day in range(0, 91, 7):
         date = SNAP + datetime.timedelta(days=day)
@@ -173,13 +173,13 @@ def cash_path(c, rows, mods=None):
         cash -= sum(a for dt, a in payables if win < dt <= date)
         if day and day % 28 == 0: cash -= rec_m
         # collections arrive at historical DSO, smoothed weekly
-        if day > 0 and day + dso_shift >= 7: cash += coll_m * 7 / 30
+        if day > 0 and day >= 7 + dso_shift: cash += coll_m * 7 / 30
         kind = "contractual" if day <= kind_switch else "behavioural"
         pts.append({"date": date.isoformat(), "cash": round(cash), "kind": kind})
         if cash < min_cash[1]: min_cash = (date, cash)
         if cash < 0 and first_short is None: first_short = (date, -cash)
     chk = [{"day": k, "cash": next(p["cash"] for p in pts if p["date"] == (SNAP + datetime.timedelta(days=k)).isoformat()) if k % 7 == 0 else pts[k // 7]["cash"],
-            "committed_due": round(sum(a for dt, a in payables if SNAP < dt <= SNAP + datetime.timedelta(days=k)))}
+            "committed_due": round(sum(a for dt, a in payables if SNAP < dt <= SNAP + datetime.timedelta(days=k)) + rec_m * (k // 28))}
            for k in (28, 56, 84)]
     for x, k in zip(chk, (30, 60, 90)): x["day"] = k
     gap = max(0.0, buffer - min_cash[1])
@@ -276,18 +276,18 @@ for c in IDS:
     for s in series: all_scores[(c, s["month"])] = s["score"]
     last_i = len(rows) - 1
     cur, prev3 = series[-1]["score"], series[max(0, last_i - 3)]["score"]
-    baseline = st.median([s["score"] for s in series[:BASE_N]]) if len(series) >= BASE_N else cur
 
     # drivers: component points now vs at baseline
     base_parts = {k: st.median([p[k] for p in parts[:BASE_N]]) for k in W} if len(parts) >= BASE_N else parts[-1]
+    baseline = sum(base_parts.values())
     drivers = []
     for k in W:
         contrib = parts[-1][k] - base_parts[k]
         recent = [rows[i]["month"] for i in range(max(0, last_i - 2), last_i + 1)]
         drivers.append({
             "key": k, "label_es": LABEL[k], "contribution_pts": round(contrib, 1),
-            "value": round(sig[-1][k], 1) if sig[-1][k] is not None else None,
-            "baseline": round(B[k], 1) if B[k] is not None else None, "unit": UNIT[k],
+            "value": round(sig[-1][k], 4 if UNIT[k] == "ratio" else 1) if sig[-1][k] is not None else None,
+            "baseline": round(B[k], 4 if UNIT[k] == "ratio" else 1) if B[k] is not None else None, "unit": UNIT[k],
             "months": recent, "evidence": evidence(c, k, recent),
         })
     drivers.sort(key=lambda x: -abs(x["contribution_pts"]))

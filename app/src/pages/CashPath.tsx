@@ -28,7 +28,7 @@ export default function CashPath() {
             <div className="h-64"><ResponsiveContainer><LineChart data={rows} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
               <CartesianGrid stroke="var(--color-line)" vertical={false} />
               <XAxis dataKey="d" tickLine={false} axisLine={false} /><YAxis tickLine={false} axisLine={false} tickFormatter={v => money(v)} width={72} domain={[minY, 'auto']} />
-              <Tooltip formatter={(v: number) => [money(v, false), 'Caja']} />
+              <Tooltip formatter={v => [money(Number(v), false), 'Caja']} />
               <ReferenceArea y1={minY} y2={0} fill="var(--color-bad)" fillOpacity={0.06} />
               <ReferenceLine y={0} stroke="var(--color-ink)" />
               <ReferenceLine y={p.buffer} stroke="var(--color-accent)" strokeDasharray="2 4" label={{ value: 'Colchón', position: 'insideTopLeft', fontSize: 11, fill: 'var(--color-accent)' }} />

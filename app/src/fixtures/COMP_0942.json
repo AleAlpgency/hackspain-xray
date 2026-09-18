@@ -11,7 +11,7 @@
   "value": 65.8,
   "band": "vigilar",
   "delta_3m": 10.8,
-  "baseline_12m": 75.8
+  "baseline_12m": 96.5
  },
  "score_series": [
   {
@@ -334,7 +334,7 @@
    "key": "unpaid_ar",
    "label_es": "Facturas de clientes sin cobrar",
    "contribution_pts": -20.0,
-   "value": 0.0,
+   "value": 0.0496,
    "baseline": 0.0,
    "unit": "ratio",
    "months": [
@@ -409,8 +409,8 @@
    "key": "fincost",
    "label_es": "Coste financiero sobre pagos",
    "contribution_pts": 0.0,
-   "value": 0.0,
-   "baseline": 0.0,
+   "value": 0.0002,
+   "baseline": 0.0005,
    "unit": "ratio",
    "months": [
     "2026-06",
@@ -523,17 +523,17 @@
    {
     "day": 30,
     "cash": 136784,
-    "committed_due": 7490
+    "committed_due": 85028
    },
    {
     "day": 60,
     "cash": 261137,
-    "committed_due": 12724
+    "committed_due": 167799
    },
    {
     "day": 90,
     "cash": 379386,
-    "committed_due": 24061
+    "committed_due": 256674
    }
   ],
   "min_cash": {
@@ -610,15 +610,15 @@
       }
      ],
      "attainment": {
-      "value": 14688,
+      "value": 88660,
       "target": 220614,
-      "pct": 7,
+      "pct": 40,
       "met": false
      },
      "cash_impact": {
-      "min_cash": 14688,
+      "min_cash": 88660,
       "min_cash_date": "2026-08-31",
-      "delta_vs_base": 0
+      "delta_vs_base": 73972
      },
      "trade_offs": [],
      "unmet_constraints": [],

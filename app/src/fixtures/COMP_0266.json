@@ -11,7 +11,7 @@
   "value": 85.2,
   "band": "sana",
   "delta_3m": 11.5,
-  "baseline_12m": 96.8
+  "baseline_12m": 97.5
  },
  "score_series": [
   {
@@ -400,8 +400,8 @@
    "key": "fincost",
    "label_es": "Coste financiero sobre pagos",
    "contribution_pts": 0.0,
-   "value": 0.0,
-   "baseline": 0.0,
+   "value": 0.0001,
+   "baseline": 0.0001,
    "unit": "ratio",
    "months": [
     "2026-06",
@@ -517,17 +517,17 @@
    {
     "day": 30,
     "cash": 425630,
-    "committed_due": 0
+    "committed_due": 20748
    },
    {
     "day": 60,
     "cash": 793421,
-    "committed_due": 0
+    "committed_due": 41497
    },
    {
     "day": 90,
     "cash": 1161213,
-    "committed_due": 0
+    "committed_due": 62245
    }
   ],
   "min_cash": {
@@ -604,15 +604,15 @@
       }
      ],
      "attainment": {
-      "value": 57839,
+      "value": 196603,
       "target": 413938,
-      "pct": 14,
+      "pct": 47,
       "met": false
      },
      "cash_impact": {
-      "min_cash": 57839,
+      "min_cash": 196603,
       "min_cash_date": "2026-08-31",
-      "delta_vs_base": 0
+      "delta_vs_base": 138764
      },
      "trade_offs": [],
      "unmet_constraints": [],

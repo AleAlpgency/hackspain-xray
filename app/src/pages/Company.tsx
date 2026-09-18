@@ -15,7 +15,9 @@ export default function Company() {
   const cajaBy = Object.fromEntries(c.caja_real_series.map(s => [s.month, s]))
   const rows = ALL.map(m => ({ m, label: monthEs(m), score: byM[m]?.score ?? null, ...(cajaBy[m] ? { bank: cajaBy[m].bank_cash, committed: -cajaBy[m].committed, pledged: -cajaBy[m].pledged, caja: cajaBy[m].caja_real } : {}) }))
   const censored = c.last_data_month < ALL[ALL.length - 1]
-  const cross = c.caja_real_series.find((s, i) => s.caja_real < 0 && (i === 0 || c.caja_real_series[i - 1].caja_real >= 0))
+  const firstNeg = c.caja_real_series.findIndex(s => s.caja_real < 0)
+  const cross = firstNeg > 0 ? c.caja_real_series[firstNeg] : null
+  const startsNeg = firstNeg === 0
   const base = c.score.baseline_12m
   return (
     <div className="flex flex-col gap-5">
@@ -36,17 +38,17 @@ export default function Company() {
             <div className="h-52"><ResponsiveContainer><LineChart data={rows} margin={{ top: 8, right: 12, left: -16, bottom: 0 }}>
               <CartesianGrid stroke="var(--color-line)" vertical={false} />
               <XAxis dataKey="label" interval={2} tickLine={false} axisLine={false} /><YAxis domain={[0, 100]} tickLine={false} axisLine={false} />
-              <Tooltip formatter={(v: number) => [Math.round(v), 'Score']} />
+              <Tooltip formatter={v => [Math.round(Number(v)), 'Score']} />
               <ReferenceArea y1={base - 5} y2={base + 5} fill="var(--color-accent)" fillOpacity={0.07} />
               {c.event && <ReferenceLine x={monthEs(c.event.onset_month)} stroke="var(--color-bad)" strokeDasharray="3 3" label={{ value: 'Estrés observado', position: 'insideTopRight', fontSize: 11, fill: 'var(--color-bad)' }} />}
               <Line type="monotone" dataKey="score" stroke="var(--color-ink)" strokeWidth={2} dot={false} connectNulls={false} />
             </LineChart></ResponsiveContainer></div>
           </Card>
-          <Card className="p-4"><H sub={cross ? `Cruza a negativo en ${monthEs(cross.month)} mientras el saldo bancario sigue positivo` : 'Saldo bancario menos compromisos y pignorado'}>Caja Real mensual</H>
+          <Card className="p-4"><H sub={cross ? `Cruza a negativo en ${monthEs(cross.month)} mientras el saldo bancario sigue positivo` : startsNeg ? `En negativo desde ${monthEs(c.caja_real_series[0].month)}` : 'Saldo bancario menos compromisos y pignorado'}>Caja Real mensual</H>
             <div className="h-56"><ResponsiveContainer><ComposedChart data={rows} margin={{ top: 8, right: 12, left: 0, bottom: 0 }} stackOffset="sign">
               <CartesianGrid stroke="var(--color-line)" vertical={false} />
               <XAxis dataKey="label" interval={2} tickLine={false} axisLine={false} /><YAxis tickLine={false} axisLine={false} tickFormatter={v => money(v)} width={72} />
-              <Tooltip formatter={(v: number, n: string) => [money(v, false), ({ bank: 'Saldo banco', committed: 'Comprometido', pledged: 'Pignorado', caja: 'Caja Real' } as Record<string, string>)[n] ?? n]} />
+              <Tooltip formatter={(v, n) => [money(Number(v), false), ({ bank: 'Saldo banco', committed: 'Comprometido', pledged: 'Pignorado', caja: 'Caja Real' } as Record<string, string>)[String(n)] ?? String(n)]} />
               <ReferenceLine y={0} stroke="var(--color-ink)" />
               {cross && <ReferenceLine x={monthEs(cross.month)} stroke="var(--color-bad)" strokeDasharray="3 3" />}
               <Bar dataKey="committed" stackId="s" fill="var(--color-warn)" fillOpacity={0.7} />

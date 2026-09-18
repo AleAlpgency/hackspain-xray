@@ -11,7 +11,7 @@
   "value": 76.1,
   "band": "sana",
   "delta_3m": -14.3,
-  "baseline_12m": 79.0
+  "baseline_12m": 94.1
  },
  "score_series": [
   {
@@ -334,8 +334,8 @@
    "key": "unpaid_ar",
    "label_es": "Facturas de clientes sin cobrar",
    "contribution_pts": -12.1,
-   "value": 0.7,
-   "baseline": 0.3,
+   "value": 0.656,
+   "baseline": 0.2897,
    "unit": "ratio",
    "months": [
     "2026-06",
@@ -616,15 +616,15 @@
       }
      ],
      "attainment": {
-      "value": 6681853,
+      "value": 8428190,
       "target": 4497106,
       "pct": 100,
       "met": true
      },
      "cash_impact": {
-      "min_cash": 6681853,
+      "min_cash": 8428190,
       "min_cash_date": "2026-08-31",
-      "delta_vs_base": 0
+      "delta_vs_base": 1746337
      },
      "trade_offs": [],
      "unmet_constraints": [],

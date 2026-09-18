@@ -11,7 +11,7 @@
   "value": 60.4,
   "band": "vigilar",
   "delta_3m": -10.5,
-  "baseline_12m": 84.9
+  "baseline_12m": 98.9
  },
  "score_series": [
   {
@@ -362,8 +362,8 @@
    "key": "unpaid_ar",
    "label_es": "Facturas de clientes sin cobrar",
    "contribution_pts": 1.0,
-   "value": 0.0,
-   "baseline": 0.0,
+   "value": 0.0006,
+   "baseline": 0.0076,
    "unit": "ratio",
    "months": [
     "2026-06",
@@ -517,17 +517,17 @@
    {
     "day": 30,
     "cash": 4872,
-    "committed_due": 0
+    "committed_due": 7004
    },
    {
     "day": 60,
     "cash": 7581,
-    "committed_due": 240
+    "committed_due": 14248
    },
    {
     "day": 90,
     "cash": 10530,
-    "committed_due": 240
+    "committed_due": 21252
    }
   ],
   "min_cash": {
@@ -604,24 +604,18 @@
       }
      ],
      "attainment": {
-      "value": -104,
+      "value": 5479,
       "target": 13033,
-      "pct": 0,
+      "pct": 42,
       "met": false
      },
      "cash_impact": {
-      "min_cash": -104,
-      "min_cash_date": "2026-09-28",
-      "delta_vs_base": -2028
+      "min_cash": 5479,
+      "min_cash_date": "2026-08-31",
+      "delta_vs_base": 3555
      },
      "trade_offs": [],
-     "unmet_constraints": [
-      {
-       "constraint_label_es": "Caja ≥ 13.033 € todo el periodo",
-       "breach_date": "2026-09-28",
-       "value": -104
-      }
-     ],
+     "unmet_constraints": [],
      "qualifies": false
     },
     {

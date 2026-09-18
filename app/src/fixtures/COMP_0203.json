@@ -11,7 +11,7 @@
   "value": 72.3,
   "band": "vigilar",
   "delta_3m": 8.7,
-  "baseline_12m": 86.8
+  "baseline_12m": 97.5
  },
  "score_series": [
   {
@@ -362,7 +362,7 @@
    "key": "fincost",
    "label_es": "Coste financiero sobre pagos",
    "contribution_pts": -8.6,
-   "value": 0.0,
+   "value": 0.0001,
    "baseline": 0.0,
    "unit": "ratio",
    "months": [
@@ -390,8 +390,8 @@
    "key": "unpaid_ar",
    "label_es": "Facturas de clientes sin cobrar",
    "contribution_pts": -0.6,
-   "value": 0.1,
-   "baseline": 0.1,
+   "value": 0.0645,
+   "baseline": 0.0604,
    "unit": "ratio",
    "months": [
     "2026-06",
@@ -532,17 +532,17 @@
    {
     "day": 30,
     "cash": 1423595,
-    "committed_due": 245595
+    "committed_due": 3424378
    },
    {
     "day": 60,
     "cash": 2827336,
-    "committed_due": 464473
+    "committed_due": 6822039
    },
    {
     "day": 90,
     "cash": 4221657,
-    "committed_due": 692770
+    "committed_due": 10229120
    }
   ],
   "min_cash": {
@@ -619,24 +619,18 @@
       }
      ],
      "attainment": {
-      "value": -977106,
+      "value": 1761357,
       "target": 5135995,
-      "pct": 0,
+      "pct": 34,
       "met": false
      },
      "cash_impact": {
-      "min_cash": -977106,
-      "min_cash_date": "2026-09-28",
-      "delta_vs_base": -1023677
+      "min_cash": 1761357,
+      "min_cash_date": "2026-08-31",
+      "delta_vs_base": 1714786
      },
      "trade_offs": [],
-     "unmet_constraints": [
-      {
-       "constraint_label_es": "Caja ≥ 5.135.995 € todo el periodo",
-       "breach_date": "2026-09-28",
-       "value": -977106
-      }
-     ],
+     "unmet_constraints": [],
      "qualifies": false
     },
     {
@@ -715,7 +709,7 @@
     }
    ],
    "remaining_gap": {
-    "amount": 4889424,
+    "amount": 3374638,
     "date": "2026-08-31"
    }
   }
