@@ -61,6 +61,8 @@ export interface CashPath {
 
 export interface PlanCard {
   plan_id: string; title_es: string
+  source_company_id: string | null   // set when the money comes from a sibling entity
+  nota_es: string | null
   changes: { driver: string; label_es: string; from: number; to: number; unit: string }[]
   attainment: { value: number; target: number; pct: number; met: boolean }
   cash_impact: { min_cash: number; min_cash_date: string; delta_vs_base: number }

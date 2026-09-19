@@ -10,11 +10,14 @@ placeholder for the real model.
 import csv, json, os, collections, datetime, statistics as st
 from stress import load, events, leadtime, BASE_N
 
-D = os.path.expanduser("~/Downloads/output/")
+D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output") + "/"
 OUT = "fixtures_out"
 GROUP = "GROUP_0016"
 SNAP = datetime.date(2026, 8, 31)
 MONTHS = [f"{y}-{m:02d}" for y in (2024, 2025, 2026) for m in range(1, 13)][8:32]  # 2024-09..2026-08
+
+
+def companyName(cid): return cid.replace("COMP_", "Filial ")
 
 
 def d(s):
@@ -204,7 +207,9 @@ def cash_path(c, rows, mods=None):
     }
 
 
-def goals_for(c, rows):
+def goals_for(c, rows, siblings=None):
+    """siblings: {company_id: free cash at snapshot} for the rest of the group, so the planner
+    can propose moving money that already belongs to the group before borrowing outside it."""
     basep = cash_path(c, rows)
     target = basep["buffer"]
     cands = [
@@ -213,22 +218,37 @@ def goals_for(c, rows):
         ("pagar_despues", "Pagar a proveedores 15 días después", {"dpo_shift_days": 15},
          [{"driver": "dpo", "label_es": "Plazo de pago", "from": 0, "to": 15, "unit": "días"}],
          [{"metric": "supplier_relation", "label_es": "Riesgo con proveedores", "delta": 1, "unit": "nivel"}]),
-        ("linea_credito", "Línea de crédito de 200 k€", {"new_credit": 200_000},
-         [{"driver": "credit", "label_es": "Nueva financiación", "from": 0, "to": 200_000, "unit": "€"}],
+        ("linea_credito", "Línea de crédito bancaria", {"new_credit": 200_000},
+         [{"driver": "credit", "label_es": "Nueva financiación bancaria", "from": 0, "to": 200_000, "unit": "€"}],
          [{"metric": "fincost", "label_es": "Coste financiero anual", "delta": 9_000, "unit": "€"}]),
     ]
+    # the money may already be inside the group: propose the largest surplus sibling first
+    src = None
+    need = max(0.0, target - basep["min_cash"]["cash"])
+    if siblings and need > 0:
+        cand = sorted(((k, v) for k, v in siblings.items() if v > 0), key=lambda x: -x[1])
+        if cand and cand[0][1] > 0:
+            src, avail = cand[0]
+            move = round(min(need, avail * 0.8))       # never drain a sibling below a fifth of its own free cash
+            if move > 0:
+                cands.append(("intercompany", f"Aporte desde {companyName(src)}", {"new_credit": move},
+                              [{"driver": "intercompany", "label_es": f"Préstamo de {companyName(src)}", "from": 0, "to": move, "unit": "€"}],
+                              [{"metric": "sibling_buffer", "label_es": f"Reduce el colchón de {companyName(src)}", "delta": move, "unit": "€"}]))
     plans = []
     for pid, title, mods, changes, trade in cands:
         p = cash_path(c, rows, mods)
         met = p["min_cash"]["cash"] >= target
         unmet = []
         if pid == "linea_credito":
-            unmet.append({"constraint_label_es": "Sin nueva deuda", "breach_date": SNAP.isoformat(), "value": 200_000})
+            unmet.append({"constraint_label_es": "Sin nueva deuda bancaria", "breach_date": SNAP.isoformat(), "value": 200_000})
         if p["first_shortfall"]:
             unmet.append({"constraint_label_es": f"Caja ≥ {target:,.0f} € todo el periodo".replace(",", "."),
                           "breach_date": p["first_shortfall"]["date"], "value": -p["first_shortfall"]["amount"]})
         plans.append({
-            "plan_id": pid, "title_es": title, "changes": changes,
+            "plan_id": pid, "title_es": title, "source_company_id": src if pid == "intercompany" else None,
+            "nota_es": ("Requiere contrato de préstamo entre vinculadas a tipo de mercado. "
+                        "La deuda consolidada del grupo no cambia.") if pid == "intercompany" else None,
+            "changes": changes,
             "attainment": {"value": p["min_cash"]["cash"], "target": target,
                            "pct": round(100 * min(1, max(0, p["min_cash"]["cash"]) / target)) if target else 100, "met": met},
             "cash_impact": {"min_cash": p["min_cash"]["cash"], "min_cash_date": p["min_cash"]["date"],
@@ -242,7 +262,7 @@ def goals_for(c, rows):
         "goal_id": "colchon_90d", "metric": "min_cash",
         "label_es": f"Caja mínima ≥ {target:,.0f} € durante 90 días".replace(",", "."),
         "target": target, "unit": "€", "deadline": (SNAP + datetime.timedelta(days=90)).isoformat(),
-        "constraints": [{"metric": "new_debt", "op": "<=", "value": 0, "label_es": "Sin nueva deuda"}],
+        "constraints": [{"metric": "new_bank_debt", "op": "<=", "value": 0, "label_es": "Sin nueva deuda bancaria"}],
         "plans": plans, "remaining_gap": gap,
     }], basep
 
@@ -384,6 +404,15 @@ os.makedirs(OUT, exist_ok=True)
 company_rows, all_scores, alerts = [], {}, []
 group_cash = collections.Counter()
 
+# pass 1: free cash per entity at the snapshot, so pass 2 can see the rest of the group
+free_at_snapshot = {}
+for c in IDS:
+    rows = panel.get(c)
+    if not rows:
+        continue
+    cp0 = cash_path(c, rows)
+    free_at_snapshot[c] = cp0["min_cash"]["cash"] - cp0["buffer"]
+
 for c in IDS:
     rows = panel.get(c)
     meta = comps[c]
@@ -416,7 +445,7 @@ for c in IDS:
         cr = r["cash_close"] - com[r["month"]] - recurring(rows, i) - pl
         caja.append({"month": r["month"], "bank_cash": round(r["cash_close"]), "committed": round(com[r["month"]] + recurring(rows, i)),
                      "pledged": round(pl), "trapped": 0, "caja_real": round(cr)})
-    goals, cp = goals_for(c, rows)
+    goals, cp = goals_for(c, rows, {k: v for k, v in free_at_snapshot.items() if k != c})
     flujos = panel_flujos(c, rows); evidencia = panel_evidencia(c, rows)
     caja_now = caja[-1]["caja_real"]
     group_cash["bank"] += rows[-1]["cash_close"]; group_cash["committed"] += caja[-1]["committed"]

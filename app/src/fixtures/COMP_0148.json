@@ -379,16 +379,18 @@
    "deadline": "2026-11-29",
    "constraints": [
     {
-     "metric": "new_debt",
+     "metric": "new_bank_debt",
      "op": "<=",
      "value": 0,
-     "label_es": "Sin nueva deuda"
+     "label_es": "Sin nueva deuda bancaria"
     }
    ],
    "plans": [
     {
      "plan_id": "cobrar_antes",
      "title_es": "Cobrar 10 días antes",
+     "source_company_id": null,
+     "nota_es": null,
      "changes": [
       {
        "driver": "dso",
@@ -416,6 +418,8 @@
     {
      "plan_id": "pagar_despues",
      "title_es": "Pagar a proveedores 15 días después",
+     "source_company_id": null,
+     "nota_es": null,
      "changes": [
       {
        "driver": "dpo",
@@ -449,11 +453,13 @@
     },
     {
      "plan_id": "linea_credito",
-     "title_es": "Línea de crédito de 200 k€",
+     "title_es": "Línea de crédito bancaria",
+     "source_company_id": null,
+     "nota_es": null,
      "changes": [
       {
        "driver": "credit",
-       "label_es": "Nueva financiación",
+       "label_es": "Nueva financiación bancaria",
        "from": 0,
        "to": 200000,
        "unit": "€"
@@ -480,7 +486,7 @@
      ],
      "unmet_constraints": [
       {
-       "constraint_label_es": "Sin nueva deuda",
+       "constraint_label_es": "Sin nueva deuda bancaria",
        "breach_date": "2026-08-31",
        "value": 200000
       }

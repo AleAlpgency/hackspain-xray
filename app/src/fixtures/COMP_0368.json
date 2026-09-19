@@ -593,16 +593,18 @@
    "deadline": "2026-11-29",
    "constraints": [
     {
-     "metric": "new_debt",
+     "metric": "new_bank_debt",
      "op": "<=",
      "value": 0,
-     "label_es": "Sin nueva deuda"
+     "label_es": "Sin nueva deuda bancaria"
     }
    ],
    "plans": [
     {
      "plan_id": "cobrar_antes",
      "title_es": "Cobrar 10 días antes",
+     "source_company_id": null,
+     "nota_es": null,
      "changes": [
       {
        "driver": "dso",
@@ -630,6 +632,8 @@
     {
      "plan_id": "pagar_despues",
      "title_es": "Pagar a proveedores 15 días después",
+     "source_company_id": null,
+     "nota_es": null,
      "changes": [
       {
        "driver": "dpo",
@@ -663,11 +667,13 @@
     },
     {
      "plan_id": "linea_credito",
-     "title_es": "Línea de crédito de 200 k€",
+     "title_es": "Línea de crédito bancaria",
+     "source_company_id": null,
+     "nota_es": null,
      "changes": [
       {
        "driver": "credit",
-       "label_es": "Nueva financiación",
+       "label_es": "Nueva financiación bancaria",
        "from": 0,
        "to": 200000,
        "unit": "€"
@@ -694,18 +700,51 @@
      ],
      "unmet_constraints": [
       {
-       "constraint_label_es": "Sin nueva deuda",
+       "constraint_label_es": "Sin nueva deuda bancaria",
        "breach_date": "2026-08-31",
        "value": 200000
       }
      ],
      "qualifies": false
+    },
+    {
+     "plan_id": "intercompany",
+     "title_es": "Aporte desde Filial 0828",
+     "source_company_id": "COMP_0828",
+     "nota_es": "Requiere contrato de préstamo entre vinculadas a tipo de mercado. La deuda consolidada del grupo no cambia.",
+     "changes": [
+      {
+       "driver": "intercompany",
+       "label_es": "Préstamo de Filial 0828",
+       "from": 0,
+       "to": 57003,
+       "unit": "€"
+      }
+     ],
+     "attainment": {
+      "value": 60578,
+      "target": 60578,
+      "pct": 100,
+      "met": true
+     },
+     "cash_impact": {
+      "min_cash": 60578,
+      "min_cash_date": "2026-08-31",
+      "delta_vs_base": 57003
+     },
+     "trade_offs": [
+      {
+       "metric": "sibling_buffer",
+       "label_es": "Reduce el colchón de Filial 0828",
+       "delta": 57003,
+       "unit": "€"
+      }
+     ],
+     "unmet_constraints": [],
+     "qualifies": true
     }
    ],
-   "remaining_gap": {
-    "amount": -142997,
-    "date": "2026-08-31"
-   }
+   "remaining_gap": null
   }
  ],
  "flujos": [

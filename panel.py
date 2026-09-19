@@ -1,6 +1,6 @@
 """Build a company-month panel from the Embat X-Ray dump. One pass per big file."""
 import csv, collections, datetime, sys
-D="/Users/alejandroperez/Downloads/output/"
+D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output") + "/"
 MAXM="2026-08"  # 2026-09 holds only day 1; drop it
 
 def d(s): return datetime.date(int(s[:4]),int(s[5:7]),int(s[8:10]))
